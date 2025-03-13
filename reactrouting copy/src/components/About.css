@@ -1,0 +1,70 @@
+#About{
+     padding: 10px 300px;
+     background-color: rgb(230, 243, 255);
+}
+#AboutPart1{
+     height: 600px;
+     
+     display: flex;
+     /* background-color: rgb(164, 35, 35); */
+}
+#Aboutpart1-left{
+     height: 100%;
+     width: 50%;
+     padding: 0px 25px;
+     /* background-color: yellowgreen; */
+}
+#Aboutpart1-left img{
+    height: 95%;
+    margin-left: 70px;
+    width: 65%;
+    /* background-color: yellowgreen; */
+}
+#Aboutpart1-left img:hover{
+     scale: 1.2;
+     transition: all ease .2s;
+}
+#Aboutpart1-right{
+    height: 100%;
+    width: 60%;
+    padding:  90px 80px;
+    text-align: left;
+    /* background-color: yellow; */
+}
+#Aboutpart1-right p{
+    font-size: 22px;
+}
+/*  */
+#AboutPart2{
+    height: 600px;
+    
+    display: flex;
+    /* background-color: rgb(164, 35, 35); */
+}
+#Aboutpart2-left{
+    height: 100%;
+    width: 50%;
+    padding: 30px 25px;
+    /* font-size: 20px; */
+    /* background-color: yellowgreen; */
+}
+#Aboutpart2-left p{
+     font-size: 22px;
+}
+#Aboutpart2-right img{
+   height: 95%;
+   margin-left: 70px;
+   width: 65%;
+   /* background-color: yellowgreen; */
+}
+#Aboutpart2-right img:hover{
+    scale: 1.2;
+    transition: all ease .2s;
+}
+#Aboutpart2-right{
+   height: 100%;
+   width: 60%;
+   padding:  90px 80px;
+   text-align: left;
+   /* background-color: yellow; */
+}
