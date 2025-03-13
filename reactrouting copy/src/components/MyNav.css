@@ -1,0 +1,31 @@
+#Nav {
+    height: 4rem;
+    width: 100%;
+    background-color: rgb(230, 243, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px; /* Adjusted padding */
+  }
+  
+  #nav2 ul{
+   list-style: none;
+    display: flex; /* Added flex to align links horizontally */
+    gap: 40px;
+   
+  
+  }
+  #nav2 ul li a {
+    text-decoration: none; /* Applied directly to links */
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+ .active-link{
+     text-decoration: none;
+     border-bottom: 2px solid black;
+     /* transition: all ease .2s ; */
+  }
+  
+  
+    
