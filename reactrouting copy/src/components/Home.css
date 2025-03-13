@@ -1,5 +1,5 @@
 #Part1{
-     height: 36.7rem;
+     height:100%;
      width: 100%;
      background-color:rgb(230, 243, 255) ;
      /* background-color: red; */
@@ -7,31 +7,36 @@
 
 }
 #part1-Left{
-      height: 100%;
+      height: 120%;
       width: 50%;
       background-color: rgb(230, 243, 255);
-      padding: 110px;
+      padding: 170px;
       text-align: left;
       
 }
+
 #part1-Left h1{
       margin-bottom: 20px;
       font-size: 8vh;
 }
+#part1-Left h1 span{
+     color: rgb(171, 97, 97);
+}
 #part1-Left p{
-     margin-bottom: 20px;
-     font-weight: 350;
+     margin-bottom: 40px;
+     font-weight: 510;
+     font-size: 20px;
 }
 #buttons{
-      margin-right: 100px;
+      margin-right: 250px;
       display: flex;
       justify-content: space-evenly;
 }
 #buttons button{
-     padding: 15px;
-     border-radius: 25px;
+     padding: 18px;
+     border-radius: 30px;
      border: none;
-     font-size: 15px;
+     font-size: 20px;
      font-weight: 530;
      background-color: black;
      color: white;
@@ -46,11 +51,128 @@
 
 
 #part1-right{
-     height: 100%;
+     height: 119.8%;
      width: 50%;
      background-color: rgb(230, 243, 255);
 }
 #part1-right img{
-      height: 99.5%;
-      margin-left: 100px;
+     margin-top: 50px;
+      height: 700px;
+      margin-left: 280px;
 }
+@media (max-width: 1200px) {
+     #part1-Left {
+         padding: 100px; /* Reduce padding for medium screens */
+     }
+ 
+     #part1-Left h1 {
+         font-size: 6vh; /* Adjust font size */
+     }
+ 
+     #part1-Left p {
+         font-size: 18px; /* Adjust paragraph font size */
+     }
+ 
+     #buttons button {
+         font-size: 18px; /* Adjust button font size */
+     }
+ 
+     #buttons {
+         margin-right: 100px; /* Reduce margin */
+     }
+ 
+     #part1-right img {
+         margin-left: 150px; /* Adjust image position */
+         height: 600px; /* Adjust image height */
+     }
+ }
+ 
+ @media (max-width: 992px) {
+     #part1-Left {
+         padding: 80px; /* Adjust padding */
+         width: 100%; /* Full width */
+         text-align: center; /* Center-align text */
+     }
+ 
+     #part1-Left h1 {
+         font-size: 5vh; /* Smaller font size */
+     }
+ 
+     #part1-Left p {
+         font-size: 16px; /* Smaller paragraph font size */
+     }
+ 
+     #buttons button {
+         font-size: 16px; /* Smaller font size */
+         padding: 12px; /* Smaller padding */
+     }
+ 
+     #buttons {
+         margin-right: 0; /* Remove margin */
+         flex-direction: column; /* Stack buttons vertically */
+         gap: 15px; /* Add gap between buttons */
+     }
+ 
+     #part1-right {
+         width: 100%; /* Full width on smaller screens */
+     }
+ 
+     #part1-right img {
+         margin-left: 0; /* Remove margin */
+         height: 500px; /* Adjust image height */
+         width: 100%; /* Make image responsive */
+     }
+ }
+ 
+ @media (max-width: 768px) {
+     #part1-Left {
+         padding: 60px; /* Further reduce padding */
+     }
+ 
+     #part1-Left h1 {
+         font-size: 4vh; /* Smaller font size */
+     }
+ 
+     #part1-Left p {
+         font-size: 14px; /* Adjust font size */
+     }
+ 
+     #buttons button {
+         font-size: 14px; /* Smaller font size */
+         padding: 10px; /* Smaller padding */
+     }
+ 
+     #part1-right img {
+         margin-left: 0;
+         height: 400px; /* Further reduce image size */
+     }
+ }
+ 
+ @media (max-width: 480px) {
+     #Part1{
+           flex-direction: column;
+     }
+     #part1-Left {
+         padding: 30px; /* Minimal padding for very small screens */
+         text-align: center; /* Center-align text */
+     }
+ 
+     #part1-Left h1 {
+         font-size: 6vh; /* Larger font size for heading */
+     }
+ 
+     #part1-Left p {
+         font-size: 12px; /* Adjust font size */
+     }
+ 
+     #buttons button {
+         font-size: 12px; /* Even smaller font size */
+         padding: 8px; /* Smaller button padding */
+     }
+ 
+     #part1-right img {
+         height: 345px; /* Adjust image height */
+         width: 35px;
+         margin-left: 0; /* Remove margin */
+     }
+ }
