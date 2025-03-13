@@ -1,0 +1,72 @@
+.maincontent5{
+    height: 50vh;
+    /* margin-top: 50px; */
+    background-color: #0E382C;
+    padding: 2vh 18vh;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+#main5in2{
+    line-height: 4vh;
+}
+#main5in3{
+    line-height: 4vh;
+}
+#main5in4{
+    line-height: 5vh;
+}
+#main5in5{
+    line-height: 5vh;
+}
+#main5in5in
+{
+  display: flex;
+  font-size: 20px;
+  gap: 20px;
+   justify-content: space-evenly;     
+}
+
+@media (max-width: 1200px) {
+    .maincontent5 {
+        padding: 2vh 10vh; /* Reduce padding for medium screens */
+    }
+    #main5in5in {
+        font-size: 18px; /* Smaller font size for better readability */
+    }
+}
+
+@media (max-width: 992px) {
+    .maincontent5 {
+        padding: 2vh 5vh; /* Further reduce padding on smaller screens */
+        flex-direction: column; /* Stack the elements vertically */
+        height: auto; /* Remove fixed height */
+    }
+    #main5in5in {
+        flex-direction: column; /* Stack items vertically */
+        font-size: 16px; /* Reduce font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .maincontent5 {
+        padding: 2vh 3vh; /* Smaller padding for very small screens */
+    }
+    #main5in5in {
+        gap: 10px; /* Reduce gap between elements */
+    }
+}
+
+@media (max-width: 480px) {
+    .maincontent5 {
+        padding: 2vh 2vh; /* Minimal padding on the smallest screens */
+        text-align: center; /* Center align text */
+    }
+    #main5in2, #main5in3, #main5in4, #main5in5 {
+        line-height: 6vh; /* Adjust line height for readability */
+    }
+    #main5in5in {
+        font-size: 14px; /* Further reduce font size */
+        gap: 5px; /* Minimal gap between elements */
+    }
+}
