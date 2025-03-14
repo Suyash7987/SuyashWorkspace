@@ -61,31 +61,33 @@
   #Middle-Right{
     height: 500px;
     width:800px;
-    padding: 15px 20px;
+    padding: 15px 30px;
     text-align: center;
     /* background-color: yellow; */
     border: 2px solid black;
+}
+#Middle-Right h2{
+     margin-bottom: 20px;
 }
 #Middle-Right form input,
 #Middle-Right form textarea {
     width: 100%;
     padding: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     border: 2px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
-    transition: all 0.3s ease-in-out;
+    /* transition: all 0.3s ease-in-out; */
 }
+#Middle-Right form input:focus
+{
+         outline: 1px solid #4CAF50;
+} 
 
-#Middle-Right form input:focus,
-#Middle-Right form textarea:focus {
-    border-color: #4CAF50;
-    outline: none;
-}
 
 #Middle-Right form input::placeholder,
 #Middle-Right form textarea::placeholder {
-    color: #aaa;
+    color: #593232;
 }
 
 #Middle-Right form button {
@@ -105,7 +107,7 @@
 
 #Middle-Right form textarea {
     resize: vertical;
-    min-height: 100px;
+    /* min-height: 100px; */
 }
 @media (max-width: 1200px) {
     #ContactMiddle {
@@ -138,7 +140,8 @@
     }
 
     #Middle-Right form button {
-        font-size: 16px; /* Adjust button font size */
+        font-size: px; /* Adjust button font size */
+        
     }
 }
 
@@ -211,10 +214,12 @@
     #ContactMiddle {
         padding: 10px 10px; /* Minimal padding for very small screens */
         flex-direction: column;
+        height: 940px;
     }
 
     #Middle-Left h2 {
         font-size: 24px; /* Further reduce font size for very small screens */
+        
     }
 
     #Middle-Left p {
@@ -224,14 +229,21 @@
     #Middle-Left i {
         font-size: 2.5vh; /* Smaller icon size */
     }
-
+   #Middle-right{
+      height: 120px;
+   }
+   
+   #Middle-Right h2{
+    margin-bottom: 10px;
+ }
     #Middle-Right form input,
     #Middle-Right form textarea {
-        font-size: 13px; /* Adjust font size for inputs */
+        font-size: 12px; /* Adjust font size for inputs */
     }
 
     #Middle-Right form button {
         font-size: 13px; /* Adjust button font size */
+        
     }
     .ContactFooter{
       display: none;  
