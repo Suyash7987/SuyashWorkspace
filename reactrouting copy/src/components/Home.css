@@ -60,9 +60,9 @@
       height: 700px;
       margin-left: 280px;
 }
-@media (max-width: 1200px) {
+@media (max-width:1024px) {
      #part1-Left {
-         padding: 100px; /* Reduce padding for medium screens */
+         padding: 50px; /* Reduce padding for medium screens */
      }
  
      #part1-Left h1 {
@@ -74,7 +74,10 @@
      }
  
      #buttons button {
-         font-size: 18px; /* Adjust button font size */
+         font-size: 12px; /* Adjust button font size */
+         width: 50rem;
+         gap: 10px;
+
      }
  
      #buttons {
@@ -82,8 +85,8 @@
      }
  
      #part1-right img {
-         margin-left: 150px; /* Adjust image position */
-         height: 600px; /* Adjust image height */
+         margin-left: 60px; /* Adjust image position */
+         height: 500px; /* Adjust image height */
      }
  }
  
@@ -167,12 +170,73 @@
  
      #buttons button {
          font-size: 12px; /* Even smaller font size */
-         padding: 8px; /* Smaller button padding */
+         padding: 9px 8px; /* Smaller button padding */
+         width: 15rem;
+         margin-left: 70px;
      }
  
      #part1-right img {
          height: 345px; /* Adjust image height */
-         width: 35px;
-         margin-left: 0; /* Remove margin */
+         width: 300px;
+         margin-left: 50px; /* Remove margin */
      }
- }
+ }@media (max-width: 375px) {
+    #Part1{
+          flex-direction: column;
+    }
+    #part1-Left {
+        padding: 30px; /* Minimal padding for very small screens */
+        text-align: center; /* Center-align text */
+    }
+
+    #part1-Left h1 {
+        font-size: 5vh; /* Larger font size for heading */
+    }
+
+    #part1-Left p {
+        font-size: 12px; /* Adjust font size */
+    }
+
+    #buttons button {
+        font-size: 12px; /* Even smaller font size */
+        padding: 9px 8px; /* Smaller button padding */
+        width: 15rem;
+        margin-left: 40px;
+    }
+
+    #part1-right img {
+        height: 345px; /* Adjust image height */
+        width: 250px;
+        margin-left: 60px; /* Remove margin */
+    }
+}
+ @media (max-width: 320px) {
+    #Part1{
+          flex-direction: column;
+    }
+    #part1-Left {
+        padding: 30px; /* Minimal padding for very small screens */
+        text-align: center; /* Center-align text */
+    }
+
+    #part1-Left h1 {
+        font-size: 5vh; /* Larger font size for heading */
+    }
+
+    #part1-Left p {
+        font-size: 12px; /* Adjust font size */
+    }
+
+    #buttons button {
+        font-size: 12px; /* Even smaller font size */
+        padding: 9px 8px; /* Smaller button padding */
+        width: 15rem;
+        margin-left: 15px;
+    }
+
+    #part1-right img {
+        height: 345px; /* Adjust image height */
+        width: 250px;
+        margin-left: 40px; /* Remove margin */
+    }
+}
