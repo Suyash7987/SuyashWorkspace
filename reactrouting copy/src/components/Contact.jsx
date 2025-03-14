@@ -6,11 +6,13 @@ function Contact() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
   function onSubmit(data) {
     console.log("Submitting the Form...", data);
+    reset();
   }
   return (
     <>
@@ -39,18 +41,23 @@ function Contact() {
           <form onSubmit={handleSubmit(onSubmit)}>
             <input
               {...register("Name", {
-                required: true,
-                minLength: {value:3,message:"Min length at least 3"},
-                maxLength: 20,
+                required: "Name is required",
+              
               })}
               type="text"
               placeholder="Name"
             />
             <br />
             <br />
-            {errors.Name && <p style={{ color: "red" }}> {errors.Name.message}</p>}
+            {errors.Name && (
+              <p style={{ 
+                position:"absolute",
+                marginTop:"-1.5%",
+                color: "red" 
+              }}> {errors.Name.message}</p>
+            )}
             <input
-              {...register("Email",{ 
+              {...register("Email", {
                 required: true,
               })}
               type="email"
@@ -58,12 +65,18 @@ function Contact() {
             />{" "}
             <br />
             <br />
-            {errors.Email && <p style={{ color: "red" }}> Email is required</p>}
+            {errors.Email && <p style={{ 
+                position:"absolute",
+                marginTop:"-1.5%",
+                color: "red" }}> Email is required</p>}
             <input
-              {...register("Contact",{
-                  required:true,
-                  minLength:{value:10,message:"Required at Least 10 digits"},
-                  maxLength:{value:10,message:"Only 10 digit chahiye"}
+              {...register("Contact", {
+                required: "Contact is Required",
+                minLength: {
+                  value: 10,
+                  message: "Required 10 digits ",
+                },
+               
               })}
               type="text"
               placeholder="Contact Number"
@@ -71,7 +84,10 @@ function Contact() {
             <br />
             <br />
             {errors.Contact && (
-              <p style={{ color: "red" }}>{errors.Contact.message}</p>
+              <p style={{ 
+                position:"absolute",
+                marginTop:"-1.5%",
+                color: "red" }}>{errors.Contact.message}</p>
             )}
             <textarea {...register("Message")} placeholder="Message"></textarea>
             <br /> <br />
@@ -79,7 +95,7 @@ function Contact() {
           </form>
         </div>
       </div>
-      < Footer />
+      <Footer />
     </>
   );
 }
