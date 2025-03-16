@@ -68,6 +68,33 @@
    text-align: left;
    /* background-color: yellow; */
 }
+@media (max-width: 1440px) {
+    #About {
+        padding: 10px 0px;
+    }
+
+    
+    #Aboutpart1-left, #Aboutpart2-left {
+        width: 50%;
+        padding: 25px 10px;
+    }
+
+    #Aboutpart1-right, #Aboutpart2-right {
+        width: 50%;
+        padding: 70px 1px;
+    }
+
+    #Aboutpart1-left img, #Aboutpart2-right img {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #Aboutpart1-right h3, #Aboutpart2-left h3 {
+        font-size: 20px;
+    }
+}
+
 @media (max-width: 1024px) {
     #About {
         padding: 10px 0px;
