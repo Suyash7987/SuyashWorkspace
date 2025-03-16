@@ -84,7 +84,18 @@
          outline: 1px solid #4CAF50;
 } 
 
-
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc; /* Default border */
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .error-border {
+    border: 2px solid red !important;
+  }
+  
 #Middle-Right form input::placeholder,
 #Middle-Right form textarea::placeholder {
     color: #593232;
