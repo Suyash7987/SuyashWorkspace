@@ -56,40 +56,61 @@
      background-color: rgb(230, 243, 255);
 }
 #part1-right img{
-     margin-top: 50px;
+      margin-top: 10px;
       height: 700px;
       margin-left: 280px;
 }
-@media (max-width:1024px) {
-     #part1-Left {
-         padding: 50px; /* Reduce padding for medium screens */
-     }
- 
-     #part1-Left h1 {
-         font-size: 6vh; /* Adjust font size */
-     }
- 
-     #part1-Left p {
-         font-size: 18px; /* Adjust paragraph font size */
-     }
- 
-     #buttons button {
-         font-size: 12px; /* Adjust button font size */
-         width: 50rem;
-         gap: 10px;
+@media (max-width:1440px){
+    #part1-Left {
+        padding:80px; /* Reduce padding for medium screens */
+     
+    }
+    #part1-right img {
+        margin-left: 76px; /* Adjust image position */
+        height: 500px; /* Adjust image height */
+    }
+    #buttons button {
+        font-size: 20px; /* Adjust button font size */
+        width: 12rem;
+        gap: 5px;
 
-     }
- 
-     #buttons {
-         margin-right: 100px; /* Reduce margin */
-     }
- 
-     #part1-right img {
-         margin-left: 60px; /* Adjust image position */
-         height: 500px; /* Adjust image height */
-     }
- }
- 
+    }
+    #buttons {
+        margin-right: 100px; /* Reduce margin */
+        
+    }
+}
+
+ @media (max-width:1200px) {
+    #part1-Left {
+        padding: 30px; /* Reduce padding for medium screens */
+    }
+
+    #part1-Left h1 {
+        font-size: 6vh; /* Adjust font size */
+    }
+
+    #part1-Left p {
+        font-size: 18px; /* Adjust paragraph font size */
+    }
+
+    #buttons button {
+        font-size: 20px; /* Adjust button font size */
+        width: 10rem;
+        gap: 30px;
+
+    }
+
+    #buttons {
+        margin-right: 100px; /* Reduce margin */
+    }
+
+    #part1-right img {
+        margin-left: 60px; /* Adjust image position */
+        height: 500px; /* Adjust image height */
+    }
+}
+
  @media (max-width: 992px) {
      #part1-Left {
          padding: 80px; /* Adjust padding */
