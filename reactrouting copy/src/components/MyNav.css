@@ -1,4 +1,5 @@
 #Nav {
+   
     height: 5rem;
     width: 100%;
     background-color: rgb(230, 243, 255);
@@ -7,7 +8,9 @@
     justify-content: space-between;
     padding: 0 100px; /* Adjusted padding */
   }
-  
+  #Nav #nav1 h1{ 
+   cursor: pointer;
+  }
   #nav2 ul{
    list-style: none;
     display: flex; /* Added flex to align links horizontally */
@@ -22,15 +25,23 @@
   #nav2 ul li a {
     text-decoration: none; /* Applied directly to links */
     color: black;
-    font-weight: bold;
+    font-weight:545;
     transition: color 0.3s ease-in-out;
   }
  .active-link{
+    padding:  12px;
+    /* background-color: rgba(69, 60, 226, 0.648); */
      text-decoration: none;
-     border-bottom: 4px solid black;
+     border-radius: 100px;
+     border: 2px solid rgb(0, 0, 0);
+     
      /* transition: all ease .2s ; */
   }
-  
+ .active-link:hover{
+    
+    border: 2px solid rgb(0, 0, 0);
+
+ }
 @media (max-width: 1200px) {
   #Nav {
       padding: 0 50px; /* Reduce padding for medium screens */
