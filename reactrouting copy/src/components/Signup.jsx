@@ -2,9 +2,8 @@ import React from "react";
 import "./Login.css";
 import { useForm } from "react-hook-form";
 import Footer from "./Footer";
-import{handleStart} from"./Home.jsx"
 
-function Login() {
+function SignUp() {
   const {
     register,
     handleSubmit,
@@ -21,14 +20,14 @@ function Login() {
       <div id="Loginpage">
         <div id="Login">
           <div id="upperlogin">
-            <h1>WELCOME BACK..!!</h1>
+            <h1>WELCOME TO OPTUM</h1>
           </div>
           <div id="Login-Left">
             <img src="Loginbgc2.jpg" alt="" />
           </div>
           <div id="Login-Right">
-            <h1>Login</h1>
-            <h4> Welcome , Please Login to your account</h4>
+            <h1>Sign in</h1>
+            <h4> Welcome , Please Sign in</h4>
             <form onSubmit={handleSubmit(onSubmit)}>
               <input
                 {...register("UserName", {
@@ -36,7 +35,7 @@ function Login() {
                 })}
                 pattern="[A-Za-z ]{3,30}"
                 type="text"
-                placeholder="UserName"
+                placeholder="Set UserName"
                 title="Should only contains Letter(A-Z,a-Z) and Spaces"
               />
               <br />
@@ -60,7 +59,7 @@ function Login() {
                 })}
                 pattern="[A-Za-z ]{3,30}"
                 type="password"
-                placeholder="Password"
+                placeholder="Set Password"
                 title="Should only contains Letter(A-Z,a-Z) and Spaces"
               />
               <br />
@@ -77,8 +76,7 @@ function Login() {
                   {errors.PassWord.message}
                 </p>
               )}
-              <input type="Submit" /><br /><br />
-              <button onClick={handleStart} >Sign up</button>
+              <input type="Submit" />
             </form>
           </div>
         </div>
@@ -88,4 +86,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default SignUp;

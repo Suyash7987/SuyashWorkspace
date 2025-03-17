@@ -1,207 +1,178 @@
 #Part1{
-     height:100%;
-     width: 100%;
-     background-color:rgb(230, 243, 255) ;
-     /* background-color: red; */
-     display: flex;
+    height:100%;
+    width: 100%;
+    background-color:rgb(230, 243, 255) ;
+    /* background-color: red; */
+    display: flex;
 
 }
 #part1-Left{
-      height: 120%;
-      width: 50%;
-      background-color: rgb(230, 243, 255);
-      padding: 170px;
-      text-align: left;
-      
+     height: 120%;
+     width: 50%;
+     background-color: rgb(230, 243, 255);
+     padding: 170px;
+     text-align: left;
+     
 }
 
 #part1-Left h1{
-      margin-bottom: 20px;
-      font-size: 8vh;
+     margin-bottom: 20px;
+     font-size: 8vh;
 }
 #part1-Left h1 span{
-     color: rgb(171, 97, 97);
+    color: rgb(171, 97, 97);
 }
 #part1-Left p{
-     margin-bottom: 40px;
-     font-weight: 510;
-     font-size: 20px;
+    margin-bottom: 40px;
+    font-weight: 510;
+    font-size: 20px;
 }
 #buttons{
-      margin-right: 250px;
-      display: flex;
-      justify-content: space-evenly;
+     margin-right: 250px;
+     display: flex;
+     justify-content: space-evenly;
 }
 #buttons button{
-     padding: 18px;
-     border-radius: 30px;
-     border: none;
-     font-size: 20px;
-     font-weight: 530;
-     background-color: black;
-     color: white;
-     cursor: pointer;
+    padding: 18px;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    font-weight: 530;
+    background-color: black;
+    color: white;
+    cursor: pointer;
 
 }
 #buttons button:hover{
-     box-shadow: 3px 2px 2px 2px rgb(235, 61, 61);
-     transition: all ease .2s;
-      
+    box-shadow: 3px 2px 2px 2px rgb(235, 61, 61);
+    transition: all ease .2s;
+     
 }
 
 
 #part1-right{
-     height: 119.8%;
-     width: 50%;
-     background-color: rgb(230, 243, 255);
+    height: 119.8%;
+    width: 50%;
+    background-color: rgb(230, 243, 255);
 }
 #part1-right img{
-      margin-top: 10px;
-      height: 700px;
-      margin-left: 280px;
+     margin-top: 10px;
+     height: 700px;
+     margin-left: 280px;
 }
 @media (max-width:1440px){
-    #part1-Left {
-        padding:80px; /* Reduce padding for medium screens */
-     
-    }
-    #part1-right img {
-        margin-left: 76px; /* Adjust image position */
-        height: 500px; /* Adjust image height */
-    }
-    #buttons button {
-        font-size: 20px; /* Adjust button font size */
-        width: 12rem;
-        gap: 5px;
+   #part1-Left {
+       padding:80px; /* Reduce padding for medium screens */
+    
+   }
+   #part1-right img {
+       margin-left: 76px; /* Adjust image position */
+       height: 500px; /* Adjust image height */
+   }
+   #buttons button {
+       font-size: 20px; /* Adjust button font size */
+       width: 12rem;
+       gap: 5px;
 
-    }
-    #buttons {
-        margin-right: 100px; /* Reduce margin */
-        
-    }
+   }
+   #buttons {
+       margin-right: 100px; /* Reduce margin */
+       
+   }
 }
 
- @media (max-width:1200px) {
+@media (max-width:1200px) {
+   #part1-Left {
+       padding: 30px; /* Reduce padding for medium screens */
+   }
+
+   #part1-Left h1 {
+       font-size: 6vh; /* Adjust font size */
+   }
+
+   #part1-Left p {
+       font-size: 18px; /* Adjust paragraph font size */
+   }
+
+   #buttons button {
+       font-size: 20px; /* Adjust button font size */
+       width: 10rem;
+       gap: 30px;
+
+   }
+
+   #buttons {
+       margin-right: 100px; /* Reduce margin */
+   }
+
+   #part1-right img {
+       margin-left: 60px; /* Adjust image position */
+       height: 500px; /* Adjust image height */
+   }
+}
+
+@media (max-width: 992px) {
     #part1-Left {
-        padding: 30px; /* Reduce padding for medium screens */
+        padding: 80px; /* Adjust padding */
+        width: 100%; /* Full width */
+        text-align: center; /* Center-align text */
     }
 
     #part1-Left h1 {
-        font-size: 6vh; /* Adjust font size */
+        font-size: 5vh; /* Smaller font size */
     }
 
     #part1-Left p {
-        font-size: 18px; /* Adjust paragraph font size */
+        font-size: 16px; /* Smaller paragraph font size */
     }
 
     #buttons button {
-        font-size: 20px; /* Adjust button font size */
-        width: 10rem;
-        gap: 30px;
-
+        font-size: 16px; /* Smaller font size */
+        padding: 12px; /* Smaller padding */
     }
 
     #buttons {
-        margin-right: 100px; /* Reduce margin */
+        margin-right: 0; /* Remove margin */
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 15px; /* Add gap between buttons */
+    }
+
+    #part1-right {
+        width: 100%; /* Full width on smaller screens */
     }
 
     #part1-right img {
-        margin-left: 60px; /* Adjust image position */
+        margin-left: 0; /* Remove margin */
         height: 500px; /* Adjust image height */
+        width: 100%; /* Make image responsive */
     }
 }
 
- @media (max-width: 992px) {
-     #part1-Left {
-         padding: 80px; /* Adjust padding */
-         width: 100%; /* Full width */
-         text-align: center; /* Center-align text */
-     }
- 
-     #part1-Left h1 {
-         font-size: 5vh; /* Smaller font size */
-     }
- 
-     #part1-Left p {
-         font-size: 16px; /* Smaller paragraph font size */
-     }
- 
-     #buttons button {
-         font-size: 16px; /* Smaller font size */
-         padding: 12px; /* Smaller padding */
-     }
- 
-     #buttons {
-         margin-right: 0; /* Remove margin */
-         flex-direction: column; /* Stack buttons vertically */
-         gap: 15px; /* Add gap between buttons */
-     }
- 
-     #part1-right {
-         width: 100%; /* Full width on smaller screens */
-     }
- 
-     #part1-right img {
-         margin-left: 0; /* Remove margin */
-         height: 500px; /* Adjust image height */
-         width: 100%; /* Make image responsive */
-     }
- }
- 
- @media (max-width: 768px) {
-     #part1-Left {
-         padding: 60px; /* Further reduce padding */
-     }
- 
-     #part1-Left h1 {
-         font-size: 4vh; /* Smaller font size */
-     }
- 
-     #part1-Left p {
-         font-size: 14px; /* Adjust font size */
-     }
- 
-     #buttons button {
-         font-size: 14px; /* Smaller font size */
-         padding: 10px; /* Smaller padding */
-     }
- 
-     #part1-right img {
-         margin-left: 0;
-         height: 400px; /* Further reduce image size */
-     }
- }
- 
- @media (max-width: 480px) {
-     #Part1{
-           flex-direction: column;
-     }
-     #part1-Left {
-         padding: 30px; /* Minimal padding for very small screens */
-         text-align: center; /* Center-align text */
-     }
- 
-     #part1-Left h1 {
-         font-size: 6vh; /* Larger font size for heading */
-     }
- 
-     #part1-Left p {
-         font-size: 12px; /* Adjust font size */
-     }
- 
-     #buttons button {
-         font-size: 12px; /* Even smaller font size */
-         padding: 9px 8px; /* Smaller button padding */
-         width: 15rem;
-         margin-left: 70px;
-     }
- 
-     #part1-right img {
-         height: 345px; /* Adjust image height */
-         width: 300px;
-         margin-left: 50px; /* Remove margin */
-     }
- }@media (max-width: 375px) {
+@media (max-width: 768px) {
+    #part1-Left {
+        padding: 60px; /* Further reduce padding */
+    }
+
+    #part1-Left h1 {
+        font-size: 4vh; /* Smaller font size */
+    }
+
+    #part1-Left p {
+        font-size: 14px; /* Adjust font size */
+    }
+
+    #buttons button {
+        font-size: 14px; /* Smaller font size */
+        padding: 10px; /* Smaller padding */
+    }
+
+    #part1-right img {
+        margin-left: 0;
+        height: 400px; /* Further reduce image size */
+    }
+}
+
+@media (max-width: 480px) {
     #Part1{
           flex-direction: column;
     }
@@ -211,7 +182,7 @@
     }
 
     #part1-Left h1 {
-        font-size: 5vh; /* Larger font size for heading */
+        font-size: 6vh; /* Larger font size for heading */
     }
 
     #part1-Left p {
@@ -222,42 +193,71 @@
         font-size: 12px; /* Even smaller font size */
         padding: 9px 8px; /* Smaller button padding */
         width: 15rem;
-        margin-left: 40px;
+        margin-left: 70px;
     }
 
     #part1-right img {
         height: 345px; /* Adjust image height */
-        width: 250px;
-        margin-left: 60px; /* Remove margin */
+        width: 300px;
+        margin-left: 50px; /* Remove margin */
     }
+}@media (max-width: 375px) {
+   #Part1{
+         flex-direction: column;
+   }
+   #part1-Left {
+       padding: 30px; /* Minimal padding for very small screens */
+       text-align: center; /* Center-align text */
+   }
+
+   #part1-Left h1 {
+       font-size: 5vh; /* Larger font size for heading */
+   }
+
+   #part1-Left p {
+       font-size: 12px; /* Adjust font size */
+   }
+
+   #buttons button {
+       font-size: 12px; /* Even smaller font size */
+       padding: 9px 8px; /* Smaller button padding */
+       width: 15rem;
+       margin-left: 40px;
+   }
+
+   #part1-right img {
+       height: 345px; /* Adjust image height */
+       width: 250px;
+       margin-left: 60px; /* Remove margin */
+   }
 }
- @media (max-width: 320px) {
-    #Part1{
-          flex-direction: column;
-    }
-    #part1-Left {
-        padding: 30px; /* Minimal padding for very small screens */
-        text-align: center; /* Center-align text */
-    }
+@media (max-width: 320px) {
+   #Part1{
+         flex-direction: column;
+   }
+   #part1-Left {
+       padding: 30px; /* Minimal padding for very small screens */
+       text-align: center; /* Center-align text */
+   }
 
-    #part1-Left h1 {
-        font-size: 5vh; /* Larger font size for heading */
-    }
+   #part1-Left h1 {
+       font-size: 5vh; /* Larger font size for heading */
+   }
 
-    #part1-Left p {
-        font-size: 12px; /* Adjust font size */
-    }
+   #part1-Left p {
+       font-size: 12px; /* Adjust font size */
+   }
 
-    #buttons button {
-        font-size: 12px; /* Even smaller font size */
-        padding: 9px 8px; /* Smaller button padding */
-        width: 15rem;
-        margin-left: 15px;
-    }
+   #buttons button {
+       font-size: 12px; /* Even smaller font size */
+       padding: 9px 8px; /* Smaller button padding */
+       width: 15rem;
+       margin-left: 15px;
+   }
 
-    #part1-right img {
-        height: 345px; /* Adjust image height */
-        width: 250px;
-        margin-left: 40px; /* Remove margin */
-    }
+   #part1-right img {
+       height: 345px; /* Adjust image height */
+       width: 250px;
+       margin-left: 40px; /* Remove margin */
+   }
 }

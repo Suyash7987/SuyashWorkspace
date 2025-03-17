@@ -1,96 +1,114 @@
-#About{
-     padding: 10px 300px;
-     background-color: rgb(230, 243, 255);
+#About {
+    padding: 10px 300px;
+    background-color: rgb(230, 243, 255);
+    /* background-color: rgba(0, 0, 0, 0.326); */
 }
-#AboutPart1{
-     height: 600px;
-     
-     display: flex;
-     /* background-color: rgb(164, 35, 35); */
+
+#AboutPart1 {
+    height: 600px;
+
+    display: flex;
+    /* background-color: rgb(164, 35, 35); */
 }
-#Aboutpart1-left{
-     height: 100%;
-     width: 50%;
-     padding: 0px 25px;
-     /* background-color: yellowgreen; */
+
+#Aboutpart1-left {
+    height: 100%;
+    width: 50%;
+    padding: 0px 25px;
+    /* background-color: yellowgreen; */
 }
-#Aboutpart1-left img{
+
+#Aboutpart1-left img {
     height: 95%;
     margin-left: 70px;
     width: 65%;
     /* background-color: yellowgreen; */
 }
-#Aboutpart1-left img:hover{
-     scale: 1.2;
-     transition: all ease .2s;
+
+#Aboutpart1-left img:hover {
+    scale: 1.2;
+    transition: all ease .2s;
 }
-#Aboutpart1-right{
+
+#Aboutpart1-right {
     height: 100%;
     width: 60%;
-    padding:  90px 80px;
+    padding: 90px 80px;
     text-align: left;
     /* background-color: yellow; */
 }
-#Aboutpart1-right p{
+
+#Aboutpart1-right p {
     font-size: 22px;
 }
+
 /*  */
-#AboutPart2{
+#AboutPart2 {
     height: 600px;
-    
+
     display: flex;
     /* background-color: rgb(164, 35, 35); */
 }
-#Aboutpart2-left{
+
+#Aboutpart2-left {
     height: 100%;
     width: 50%;
     padding: 30px 25px;
     /* font-size: 20px; */
     /* background-color: yellowgreen; */
 }
-#Aboutpart2-left p{
-     font-size: 22px;
+
+#Aboutpart2-left p {
+    font-size: 22px;
 }
-#Aboutpart2-right img{
-   height: 95%;
-   margin-left: 70px;
-   width: 65%;
-   /* background-color: yellowgreen; */
+
+#Aboutpart2-right img {
+    height: 95%;
+    margin-left: 70px;
+    width: 65%;
+    /* background-color: yellowgreen; */
 }
-#Aboutpart2-right img:hover{
+
+#Aboutpart2-right img:hover {
     scale: 1.2;
     transition: all ease .2s;
 }
-#Aboutpart2-right{
-   height: 100%;
-   width: 60%;
-   padding:  90px 80px;
-   text-align: left;
-   /* background-color: yellow; */
+
+#Aboutpart2-right {
+    height: 100%;
+    width: 60%;
+    padding: 90px 80px;
+    text-align: left;
+    /* background-color: yellow; */
 }
+
 @media (max-width: 1440px) {
     #About {
         padding: 10px 0px;
     }
 
-    
-    #Aboutpart1-left, #Aboutpart2-left {
+
+    #Aboutpart1-left,
+    #Aboutpart2-left {
         width: 50%;
         padding: 25px 10px;
     }
 
-    #Aboutpart1-right, #Aboutpart2-right {
+    #Aboutpart1-right,
+    #Aboutpart2-right {
         width: 50%;
         padding: 70px 1px;
     }
 
-    #Aboutpart1-left img, #Aboutpart2-right img {
+    #Aboutpart1-left img,
+    #Aboutpart2-right img {
         width: 80%;
         margin-left: auto;
         margin-right: auto;
     }
 
-    #Aboutpart1-right h3, #Aboutpart2-left h3 {
+    #Aboutpart1-right h3,
+    #Aboutpart2-left h3 {
         font-size: 20px;
     }
 }
@@ -100,54 +118,64 @@
         padding: 10px 0px;
     }
 
-    
-    #Aboutpart1-left, #Aboutpart2-left {
+
+    #Aboutpart1-left,
+    #Aboutpart2-left {
         width: 50%;
         padding: 25px 10px;
     }
 
-    #Aboutpart1-right, #Aboutpart2-right {
+    #Aboutpart1-right,
+    #Aboutpart2-right {
         width: 50%;
         padding: 70px 1px;
     }
 
-    #Aboutpart1-left img, #Aboutpart2-right img {
+    #Aboutpart1-left img,
+    #Aboutpart2-right img {
         width: 80%;
         margin-left: auto;
         margin-right: auto;
     }
 
-    #Aboutpart1-right h3, #Aboutpart2-left h3 {
+    #Aboutpart1-right h3,
+    #Aboutpart2-left h3 {
         font-size: 20px;
     }
 }
+
 @media (max-width: 768px) {
     #About {
         padding: 10px 50px;
     }
 
-    #AboutPart1, #AboutPart2 {
+    #AboutPart1,
+    #AboutPart2 {
         flex-direction: column;
         height: auto;
     }
 
-    #Aboutpart1-left, #Aboutpart2-left {
+    #Aboutpart1-left,
+    #Aboutpart2-left {
         width: 100%;
         padding: 20px 0;
     }
 
-    #Aboutpart1-right, #Aboutpart2-right {
+    #Aboutpart1-right,
+    #Aboutpart2-right {
         width: 100%;
         padding: 20px;
     }
 
-    #Aboutpart1-left img, #Aboutpart2-right img {
+    #Aboutpart1-left img,
+    #Aboutpart2-right img {
         width: 50%;
         margin-left: 90px;
         /* margin-right: auto; */
     }
 
-    #Aboutpart1-right p, #Aboutpart2-left p {
+    #Aboutpart1-right p,
+    #Aboutpart2-left p {
         font-size: 18px;
     }
 }
@@ -158,42 +186,53 @@
         padding: 10px 20px;
     }
 
-    #AboutPart1, #AboutPart2 {
+    #AboutPart1,
+    #AboutPart2 {
         flex-direction: column;
         height: auto;
     }
 
-    #Aboutpart1-left, #Aboutpart2-left {
+    #Aboutpart1-left,
+    #Aboutpart2-left {
         width: 100%;
         padding: 15px 0;
     }
- #Aboutpart1-right h1{
-             text-align: center;
-             font-size: 40px;
+
+    #Aboutpart1-right h1 {
+        text-align: center;
+        font-size: 40px;
     }
-    #Aboutpart1-right p{
+
+    #Aboutpart1-right p {
         text-align: center;
         font-size: 0px;
-}
-    #AboutPart1 #Aboutpart1-right ,p{
+    }
+
+    #AboutPart1 #Aboutpart1-right,
+    p {
         text-align: center;
         font-size: -5px;
-}
-    #Aboutpart1-right, #Aboutpart2-right {
+    }
+
+    #Aboutpart1-right,
+    #Aboutpart2-right {
         width: 100%;
         padding: 15px;
     }
 
-    #Aboutpart1-left img, #Aboutpart2-right img {
+    #Aboutpart1-left img,
+    #Aboutpart2-right img {
         width: 65%;
         margin-left: 75px;
-       
+
     }
-    #Aboutpart2-left h3{
-         text-align: center;
-    }
-    #Aboutpart2-left h1{
+
+    #Aboutpart2-left h3 {
         text-align: center;
-   }
-    
+    }
+
+    #Aboutpart2-left h1 {
+        text-align: center;
+    }
+
 }

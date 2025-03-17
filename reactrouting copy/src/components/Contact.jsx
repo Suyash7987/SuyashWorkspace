@@ -23,7 +23,7 @@ function Contact() {
           <p>Don’t hesitate to get in touch, we’d love to hear from you!</p>
         </div>
       </div>
-      <div id="ContactMiddle">
+      <div id="ContactMiddle"> 
         <div id="Middle-Left">
           <h2>Get in touch</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
