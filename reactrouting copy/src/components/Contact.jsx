@@ -39,24 +39,29 @@ function Contact() {
         <div id="Middle-Right">
           <h2>Fill out the form and we’ll listen</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
-            <input
+            <input className={`form-input ${errors.Name ? "error-border" : ""}`}
               {...register("Name", {
                 required: "Name is required",
-              
               })}
+              pattern="[A-Za-z ]{3,30}"
               type="text"
               placeholder="Name"
+              title="Should only contains Letter(A-Z,a-Z) and Spaces"
             />
             <br />
             <br />
             {errors.Name && (
-              <p style={{ 
-                position:"absolute",
-                marginTop:"-1.5%",
-                color: "red" 
-              }}> {errors.Name.message}</p>
+              <p
+                style={{
+                  position: "absolute",
+                  marginTop: "-2%",
+                  color: "red",
+                }}
+              >
+                {errors.Name.message}
+              </p>
             )}
-            <input
+            <input className={`form-input ${errors.Name ? "error-border" : ""}`}
               {...register("Email", {
                 required: true,
               })}
@@ -65,29 +70,46 @@ function Contact() {
             />{" "}
             <br />
             <br />
-            {errors.Email && <p style={{ 
-                position:"absolute",
-                marginTop:"-1.5%",
-                color: "red" }}> Email is required</p>}
-            <input
+            {errors.Email && (
+              <p
+                style={{
+                  position: "absolute",
+                  marginTop: "-2%",
+                  color: "red",
+                }}
+              >
+                Email is required
+              </p>
+            )}
+            <input className={`form-input ${errors.Name ? "error-border" : ""}`}
               {...register("Contact", {
                 required: "Contact is Required",
+              
                 minLength: {
                   value: 10,
                   message: "Required 10 digits ",
                 },
-               
+                maxLength:{
+                   value:10,
+                   message:"Only 10 Digits are acceptable"
+                }
               })}
+              pattern="[0-9 ]{10}"
               type="text"
               placeholder="Contact Number"
             />
             <br />
             <br />
             {errors.Contact && (
-              <p style={{ 
-                position:"absolute",
-                marginTop:"-1.5%",
-                color: "red" }}>{errors.Contact.message}</p>
+              <p
+                style={{
+                  position: "absolute",
+                  marginTop: "-2%",
+                  color: "red",
+                }}
+              >
+                {errors.Contact.message}
+              </p>
             )}
             <textarea {...register("Message")} placeholder="Message"></textarea>
             <br /> <br />
