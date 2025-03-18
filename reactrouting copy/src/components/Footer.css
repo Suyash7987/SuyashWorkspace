@@ -8,21 +8,10 @@
     color: white;
 }
 
-#main5in2 {
+#main5in2,#main5in3,#main5in4,#main5in5 {
     line-height: 4vh;
 }
 
-#main5in3 {
-    line-height: 4vh;
-}
-
-#main5in4 {
-    line-height: 5vh;
-}
-
-#main5in5 {
-    line-height: 5vh;
-}
 
 #main5in5in {
     display: flex;

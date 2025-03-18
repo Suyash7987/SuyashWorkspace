@@ -26,8 +26,8 @@ function SignUp() {
             <img src="Loginbgc2.jpg" alt="" />
           </div>
           <div id="Login-Right">
-            <h1>Sign in</h1>
-            <h4> Welcome , Please Sign in</h4>
+            <h1>Sign up</h1>
+            <h4> Welcome , Please Sign up</h4>
             <form onSubmit={handleSubmit(onSubmit)}>
               <input
                 {...register("UserName", {

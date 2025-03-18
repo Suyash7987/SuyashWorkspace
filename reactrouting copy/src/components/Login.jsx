@@ -4,19 +4,19 @@ import { UserCred } from "./Usernames.js";
 import { useForm } from "react-hook-form";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
-// import{handleStart} from"./Home.jsx"
 
-function Login({setUserLogined}) {
+
+function Login({ setUserLogined }) {
   const [UserName, setUserName] = useState("");
   const [Password, setPassword] = useState("");
-  const navigate =useNavigate()
-   function handleLogin(){
-        if(UserName===UserCred.Name && Password===UserCred.password ){
-             localStorage.setItem("userLogined","true")
-             setUserLogined(true);
-            navigate('/Product');
-        }
-   }    
+  const navigate = useNavigate();
+  function handleLogin() {
+    if (UserName === UserCred.Name && Password === UserCred.password) {
+      localStorage.setItem("userLogined", "true");
+      setUserLogined(true);
+      navigate("/Product");
+    }
+  }
 
   const {
     register,
@@ -51,7 +51,7 @@ function Login({setUserLogined}) {
                 type="text"
                 placeholder="UserName"
                 value={UserName}
-                onChange={(e)=>setUserName(e.target.value)}
+                onChange={(e) => setUserName(e.target.value)}
                 title="Should only contains Letter(A-Z,a-Z) and Spaces"
               />
               <br />
@@ -73,11 +73,10 @@ function Login({setUserLogined}) {
                 {...register("PassWord", {
                   required: "Password Required ",
                 })}
-                
                 type="password"
                 placeholder="Password"
                 value={Password}
-                onChange={(e)=>setPassword(e.target.value)}
+                onChange={(e) => setPassword(e.target.value)}
                 title="Should only contains Letter(A-Z,a-Z) and Spaces"
               />
               <br />

@@ -1,0 +1,234 @@
+/* Main container */
+#ProMain {
+    height:1296px;
+    width: 100%;
+    /* background-color: salmon; */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Headline section */
+  #headline {
+    height: 200px;
+    width: 100%;
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  /* Inner container (grid setup for displaying items) */
+  #innerdiv {
+    height: 740px;
+    width: 100%;
+    /* background-color:rgb(180, 216, 245); */
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 60px; /* Space between grid items */
+    padding: 20px; 
+    position: relative;
+  }
+  
+  /* Individual item container */
+  .items {
+    background-color: rgba(255, 183, 0, 0.725);
+    border-radius: 20px; /* Optional rounded corners */
+    text-align: center;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; */
+    height: 500px;
+    width: 340px;
+  }
+  
+  #item-upper {
+    background-color:rgb(218, 212, 212);
+    /* padding: 20px; */
+    height: 300px;
+    border-radius: 20px;
+  }
+  #item-upper img{
+     height: 100%;
+     width: 100%;
+     object-fit: cover;
+  }
+  #item-lower {
+    /* background-color: rgb(22, 224, 184); */
+    width: 100%;
+    gap: 10px;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+  }
+  #item-lower button {
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    font-size: 17px;
+    margin: 0;
+}
+#item-lower button:hover{
+     background-color: black;
+     color: white;
+     transition: all ease .2s;
+}
+  h1 {
+    font-size: 30px;
+    
+  }
+  
+  p {
+    font-size: 18px;
+    
+  }
+  @media (max-width: 1440px) {
+    #ProMain {
+        height:127vh; 
+    }
+
+    #headline {
+        font-size: 22px;
+    }
+
+    #innerdiv {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Keeps the grid layout similar */
+        gap: 50px;
+    }
+
+    .items {
+        height: 450px; /* Slightly smaller height */
+        width: 320px; /* Slightly smaller width */
+    }
+
+    #item-upper {
+        height: 270px;
+    }
+
+    #item-lower button {
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+/* For tablets (screens 768px - 1024px wide) */
+@media (max-width: 1024px) {
+    #ProMain {
+        height: 162vh; 
+    }
+
+    #headline {
+        font-size: 18px; /* Smaller font size */
+    }
+
+    #innerdiv {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust grid layout */
+        gap: 40px;
+    }
+
+    .items {
+        height: 450px; /* Reduce height of items */
+        width: 280px; /* Reduce width of items */
+    }
+
+    #item-upper {
+        height: 250px; /* Adjust image container height */
+    }
+
+    #item-lower button {
+        padding: 12px;
+        font-size: 16px; /* Slightly smaller font size for buttons */
+    }
+}
+
+/* For mobile devices (screens 480px - 767px wide) */
+@media (max-width: 768px) {
+    #ProMain {
+        height: 174vh;
+    }
+
+    #headline {
+        height: 150px; /* Reduce headline section height */
+        font-size: 16px; /* Smaller font size */
+    }
+
+    #innerdiv {
+         /* Stack grid items in a single column */
+        gap: 30px; /* Reduce gap between items */
+    }
+
+    .items {
+        height: 400px; /* Reduce height of items */
+        width: 100%;  /* Make items full width */
+    }
+
+    #item-upper {
+        height: 200px; /* Adjust image container height */
+    }
+
+    #item-lower button {
+        padding: 10px;
+        font-size: 14px; /* Smaller button font size */
+    }
+
+    h1 {
+        font-size: 24px; /* Smaller font size for headings */
+    }
+
+    p {
+        font-size: 16px; /* Adjust paragraph font size */
+    }
+}
+
+/* For very small mobile screens (screens less than 480px wide) */
+@media (max-width: 480px) {
+    #ProMain {
+        height: 151vh;
+        padding: 10px; /* Add padding to avoid content touching edges */
+    }
+
+    #headline {
+        height: 130px;
+        font-size: 14px; /* Even smaller font size */
+    }
+
+    #innerdiv {
+        grid-template-columns: 1fr; /* Stack items in one column */
+        gap: 20px; /* Reduce gap even further */
+    }
+
+    .items {
+        height: 350px; /* Even smaller item height */
+        width: 100%;  /* Make items full width */
+    }
+
+    #item-upper {
+        height: 180px; /* Smaller image container height */
+    }
+
+    #item-lower button {
+        padding: 8px;
+        font-size: 12px; /* Even smaller button font size */
+    }
+
+    h1 {
+        font-size: 20px; /* Adjust heading size */
+    }
+
+    p {
+        font-size: 14px; /* Adjust paragraph font size */
+    }
+}
