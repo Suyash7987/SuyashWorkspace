@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Login from './Login';
-function Loading() {
+function Loading({userLogined,setUserLogined}) {
    const [Loading, setLoading] = useState(true)
   
    function Loader(){ 
@@ -30,7 +30,7 @@ function Loading() {
    return (
     <>
       {Loading?<Loader/> :
-        <Login/> 
+        <Login setUserLogined={setUserLogined} /> 
       }
     </>
   )

@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.css";
+import { UserCred } from "./Usernames.js";
 import { useForm } from "react-hook-form";
 import Footer from "./Footer";
-import{handleStart} from"./Home.jsx"
+import { useNavigate } from "react-router-dom";
+// import{handleStart} from"./Home.jsx"
 
-function Login() {
+function Login({setUserLogined}) {
+  const [UserName, setUserName] = useState("");
+  const [Password, setPassword] = useState("");
+  const navigate =useNavigate()
+   function handleLogin(){
+        if(UserName===UserCred.Name && Password===UserCred.password ){
+             localStorage.setItem("userLogined","true")
+             setUserLogined(true);
+            navigate('/Product');
+        }
+   }    
+
   const {
     register,
     handleSubmit,
@@ -32,11 +45,13 @@ function Login() {
             <form onSubmit={handleSubmit(onSubmit)}>
               <input
                 {...register("UserName", {
-                  required: "UserName Required ",
+                  required: "*UserName Required ",
                 })}
                 pattern="[A-Za-z ]{3,30}"
                 type="text"
                 placeholder="UserName"
+                value={UserName}
+                onChange={(e)=>setUserName(e.target.value)}
                 title="Should only contains Letter(A-Z,a-Z) and Spaces"
               />
               <br />
@@ -58,9 +73,11 @@ function Login() {
                 {...register("PassWord", {
                   required: "Password Required ",
                 })}
-                pattern="[A-Za-z ]{3,30}"
+                
                 type="password"
                 placeholder="Password"
+                value={Password}
+                onChange={(e)=>setPassword(e.target.value)}
                 title="Should only contains Letter(A-Z,a-Z) and Spaces"
               />
               <br />
@@ -77,8 +94,10 @@ function Login() {
                   {errors.PassWord.message}
                 </p>
               )}
-              <input type="Submit" /><br /><br />
-              <button onClick={handleStart} >Sign up</button>
+              <button onClick={handleLogin}>Submit</button>
+              <br />
+              <br />
+              <button>Sign up</button>
             </form>
           </div>
         </div>

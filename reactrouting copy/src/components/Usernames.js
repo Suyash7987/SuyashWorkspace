@@ -1,4 +1,4 @@
-const Username={
+export const UserCred={
      Name:"Suyash",
      password:"12345"
 }

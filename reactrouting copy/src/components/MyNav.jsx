@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import "./MyNav.css"; // Import the CSS file
+import "./MyNav.css"; 
 
 
-function MyNavbar() {
-      
-     
+function MyNavbar({userLogined}) { 
+    const user =localStorage.getItem("Login") 
   return (
     <>
       <div id="Nav">
@@ -26,9 +25,11 @@ function MyNavbar() {
             <li>
               <NavLink to="/Product"className={({isActive})=>isActive?"active-link":""}>Products</NavLink>
             </li>
-            <li>
+            {userLogined ? <li>
+              <NavLink to="/Profile"className={({isActive})=>isActive?"active-link":""}>Profile</NavLink>
+            </li> :<li>
               <NavLink to="/Login"className={({isActive})=>isActive?"active-link":""}>Login</NavLink>
-            </li>
+            </li> }           
             <li>
               <NavLink to="/SignUp" className={({isActive})=>isActive?"active-link":""}>SignUp</NavLink>
             </li>
