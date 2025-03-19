@@ -5,11 +5,13 @@ import { useForm } from "react-hook-form";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
 
-
 function Login({ setUserLogined }) {
   const [UserName, setUserName] = useState("");
   const [Password, setPassword] = useState("");
   const navigate = useNavigate();
+  function handleSignup() {
+    navigate("/Signup");
+  }
   function handleLogin() {
     if (UserName === UserCred.Name && Password === UserCred.password) {
       localStorage.setItem("userLogined", "true");
@@ -96,7 +98,7 @@ function Login({ setUserLogined }) {
               <button onClick={handleLogin}>Submit</button>
               <br />
               <br />
-              <button>Sign up</button>
+              <button onClick={handleSignup}>Sign up</button>
             </form>
           </div>
         </div>

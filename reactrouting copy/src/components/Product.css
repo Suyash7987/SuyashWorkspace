@@ -65,13 +65,26 @@
     
     
   }
+  #item-lower #Link{
+       text-decoration: none;
+       color: black;
+       padding: 15px 55px;
+       border-radius: 20px;
+       background-color: white;  
+  }
   #item-lower button {
     padding: 15px;
     cursor: pointer;
     border-radius: 30px;
     border: none;
+    list-style: none;
     font-size: 17px;
     margin: 0;
+}
+#item-lower #Link:hover{
+    background-color: black;
+    color: white;
+    transition: all ease .2s;
 }
 #item-lower button:hover{
      background-color: black;

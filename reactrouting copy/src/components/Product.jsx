@@ -1,6 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import './Product.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
+export const data = [
+  { img: "/Images/vincetChase.png", Item: "Vincet Chase", Name: "Hustlr ACE",MRP:"$499",caption:" Sunglasses for Men and Women"},
+  { img: "/Images/Rayban.png", Item: "Rayban", Name: "Wayfarer",MRP:"$499",caption:" Sunglasses for Men and Women" },
+  { img: "/Images/Fastrack.png", Item: "FasTrack", Name: "Aviator" ,MRP:"$499",caption:" Sunglasses for Men and Women"},
+  { img: "/Images/Titan.png", Item: "Titan", Name: "Tees" ,MRP:"$499",caption:" Sunglasses for Men and Women"},
+  { img: "/Images/Maybach.png", Item: "MayBach", Name: "The Boss" ,MRP:"$499",caption:" Sunglasses for Men and Women"},
+  { img: "/Images/Maybach.png", Item: "MayBach", Name: "The Boss" ,MRP:"$499",caption:" Sunglasses for Men and Women"},
+  { img: "/Images/Titan.png", Item: "Titan", Name: "Tees" ,MRP:"$499",caption:" Sunglasses for Men and Women"},
+  { img: "/Images/vincetChase.png", Item: "Vincet Chase", Name: "Hustlr ACE",MRP:"$499" ,caption:" Sunglasses for Men and Women"},
+  { img: "/Images/Rayban.png", Item: "Rayban", Name: "Wayfarer",MRP:"$499" ,caption:" Sunglasses for Men and Women"},
+  { img: "/Images/Fastrack.png", Item: "FasTrack", Name: "Aviator" ,MRP:"$499",caption:" Sunglasses for Men and Women"},
+];
 
 function Product() {
   const [loading, setLoading] = useState(true);
@@ -36,18 +48,6 @@ function Product() {
     );
   }
 
-  const data = [
-    { img: "./vincetChase.png", Item: "Vincet Chase", Name: "Hustlr ACE" },
-    { img: "./Rayban.png", Item: "Rayban", Name: "Wayfarer" },
-    { img: "./Fastrack.png", Item: "FasTrack", Name: "Aviator" },
-    { img: "./Titan.png", Item: "Titan", Name: "Tees" },
-    { img: "./Maybach.png", Item: "MayBach", Name: "The Boss" },
-    { img: "./Maybach.png", Item: "MayBach", Name: "The Boss" },
-    { img: "./Titan.png", Item: "Titan", Name: "Tees" },
-    { img: "./vincetChase.png", Item: "Vincet Chase", Name: "Hustlr ACE" },
-    { img: "./Rayban.png", Item: "Rayban", Name: "Wayfarer" },
-    { img: "./Fastrack.png", Item: "FasTrack", Name: "Aviator" },
-  ];
 
   return (
     <>
@@ -65,7 +65,7 @@ function Product() {
                 <div id="item-lower">
                   <h1>{item.Item}</h1>
                   <p>{item.Name}</p>
-                  <button>View Detail</button>
+                 <Link id="Link"to={`/View/${index}`}>View Details</Link>
                   <button onClick={handleNav}>Buy Now</button>
                 </div>
               </div>
