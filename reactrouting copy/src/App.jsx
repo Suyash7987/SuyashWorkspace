@@ -10,6 +10,7 @@ import Product from "./components/Product";
 import Loading from "./components/Loading";
 import Profile from "./components/Profile";
 import { useState } from "react";
+import View from "./components/View";
 
 function App() {
   const [userLogined, setUserLogined] = useState(
@@ -49,6 +50,15 @@ function App() {
         <>
           <MyNav userLogined={userLogined} />
           <Product />
+        </>
+      ),
+    },
+    {
+      path: "/View/:index",
+      element: (
+        <>
+          <MyNav userLogined={userLogined} />
+          <View />
         </>
       ),
     },
