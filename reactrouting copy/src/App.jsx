@@ -9,19 +9,24 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Product from "./components/Product";
 import Loading from "./components/Loading";
 import Profile from "./components/Profile";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import View from "./components/View";
 
 function App() {
   const [userLogined, setUserLogined] = useState(
     localStorage.getItem("userLogined") === "true"
   );
+  useEffect(() => {
+    // This ensures the user state persists across page reloads
+    localStorage.setItem("userLogined", userLogined.toString());
+  }, [userLogined]);
+
   const route = createBrowserRouter([
     {
       path: "/",
       element: (
         <>
-          <MyNav userLogined={userLogined} />
+          <MyNav userLogined={userLogined}setUserLogined={setUserLogined} />
           <Home />
         </>
       ),
@@ -30,7 +35,7 @@ function App() {
       path: "/About",
       element: (
         <>
-          <MyNav userLogined={userLogined} />
+          <MyNav userLogined={userLogined} setUserLogined={setUserLogined} />
           <About />
         </>
       ),
@@ -39,7 +44,7 @@ function App() {
       path: "/Contact",
       element: (
         <>
-          <MyNav userLogined={userLogined} />
+          <MyNav userLogined={userLogined}setUserLogined={setUserLogined} />
           <Contact />
         </>
       ),
@@ -48,7 +53,7 @@ function App() {
       path: "/Product",
       element: (
         <>
-          <MyNav userLogined={userLogined} />
+          <MyNav userLogined={userLogined} setUserLogined={setUserLogined} />
           <Product />
         </>
       ),
@@ -57,7 +62,7 @@ function App() {
       path: "/View/:index",
       element: (
         <>
-          <MyNav userLogined={userLogined} />
+          <MyNav userLogined={userLogined}setUserLogined={setUserLogined} />
           <View />
         </>
       ),
@@ -66,7 +71,7 @@ function App() {
       path: "/Login",
       element: (
         <>
-          <MyNav userLogined={userLogined} />
+          <MyNav userLogined={userLogined} setUserLogined={setUserLogined} />
           <Loading userLogined={userLogined} setUserLogined={setUserLogined} />
         </>
       ),
@@ -75,7 +80,7 @@ function App() {
       path: "/Signup",
       element: (
         <>
-          <MyNav userLogined={userLogined} />
+          <MyNav userLogined={userLogined} setUserLogined={setUserLogined} />
           <SignUp />
         </>
       ),
@@ -84,8 +89,8 @@ function App() {
       path: "/Profile",
       element: (
         <>
-          <MyNav userLogined={userLogined} />
-          <ProtectedRoute redirectTo="/Profile" userLogined={userLogined}>
+          <MyNav userLogined={userLogined} setUserLogined={setUserLogined}/>
+          <ProtectedRoute redirectTo="/Login" userLogined={userLogined}>
             <Profile
               userLogined={userLogined}
               setUserLogined={setUserLogined}
