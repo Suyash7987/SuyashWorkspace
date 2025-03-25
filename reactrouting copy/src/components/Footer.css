@@ -1,26 +1,61 @@
 .maincontent5 {
-    height: 50vh;
+   
     /* margin-top: 50px; */
-    background-color: #0E382C;
+    background-color: #10212A;
     padding: 2vh 18vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     color: white;
 }
 
 #main5in2,#main5in3,#main5in4,#main5in5 {
-    line-height: 4vh;
+    line-height: 4.5vh;
+    
+}
+#main5in2{
+    /* background-color: aqua; */
+    width: 20vw;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+#main5in2-ic{
+    width: 70%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 40px;
+}
+#main5in2-ic i{
+     background-color: #10212A;
+     color: white;
+     border-radius: 25px;
+     padding: 5px;
 }
 
+#main5in2-ic i:hover{
+   cursor: pointer;
+   background-color: #ffffff;
+   color: rgb(0, 0, 0);
+   transition:  all ease .2s;
 
+}
+#main5in5{
+   text-align: center;
+}
+#main5in5in i{
+     font-size: 30px;
+}
 #main5in5in {
     display: flex;
+    flex-direction: column;
+    width: 20vw;
     font-size: 20px;
-    gap: 20px;
-    justify-content: space-evenly;
+    text-align: center;
+    /* background-color: rgb(165, 122, 66); */
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
     .maincontent5 {
         padding: 2vh 2vh;
         /* Reduce padding for medium screens */
@@ -32,14 +67,14 @@
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
     .maincontent5 {
-        padding: 2vh 5vh;
+        
         /* Further reduce padding on smaller screens */
-        flex-direction: column;
+    
         /* Stack the elements vertically */
         height: auto;
-        /* Remove fixed height */
+        gap: 0px;
     }
 
     #main5in5in {
@@ -52,7 +87,7 @@
 
 @media (max-width: 768px) {
     .maincontent5 {
-        padding: 2vh 0vh;
+        
         /* Smaller padding for very small screens */
         display: flex;
         flex-direction: row;
@@ -60,17 +95,14 @@
 
     }
 
-    #main5in5in {
-        gap: 10px;
-        /* Reduce gap between elements */
-    }
+
 }
 
 @media (max-width: 480px) {
     .maincontent5 {
         padding: 2vh 2vh;
         /* Minimal padding on the smallest screens */
-        text-align: center;
+  align-items: center;
         /* Center align text */
         flex-direction: column;
     }
@@ -80,6 +112,7 @@
     #main5in4,
     #main5in5 {
         line-height: 4vh;
+      align-items: center;
         /* Adjust line height for readability */
     }
 

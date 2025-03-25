@@ -11,17 +11,28 @@
   #headline {
     height: 200px;
     width: 100%;
-    background-color: azure;
+    background-color: rgb(49, 82, 77);
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     font-size: 20px;
     text-align: center;
   }
-  
+  #headline i{
+     font-size: 50px;
+     color: rgb(255, 255, 255);
+     
+  }
+  #headline h1{
+    font-size: 50px;
+    font-family: cursive;
+    color: #ffc88a;
+    
+ }
   /* Inner container (grid setup for displaying items) */
   #innerdiv {
-    height: 740px;
+    height: 700px;
     width: 100%;
     /* background-color:rgb(180, 216, 245); */
     display:grid;
@@ -33,14 +44,10 @@
   
   /* Individual item container */
   .items {
-    background-color: rgba(255, 183, 0, 0.725);
+    background-color: rgba(224, 200, 140, 0.725);
     border-radius: 20px; /* Optional rounded corners */
     text-align: center;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center; */
-    height: 500px;
+    height: 450px;
     width: 340px;
   }
   
@@ -48,6 +55,9 @@
     background-color:rgb(218, 212, 212);
     /* padding: 20px; */
     height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     border-radius: 20px;
   }
   #item-upper img{
@@ -58,28 +68,42 @@
   #item-lower {
     /* background-color: rgb(22, 224, 184); */
     width: 100%;
-    gap: 10px;   
+    gap: 20px;   
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
-    
+    align-items: center;   
   }
-  #item-lower #Link{
+  #itemslower
+  {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    /* background-color: red; */
+  }
+  #itemslower-2
+  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: red;
+  }
+  #itemslower #Link{
        text-decoration: none;
        color: black;
-       padding: 15px 55px;
+       padding: 15px;
        border-radius: 20px;
        background-color: white;  
   }
-  #item-lower button {
-    padding: 15px;
+  #itemslower button  {
+    
     cursor: pointer;
-    border-radius: 30px;
+    border-radius: 50px;
     border: none;
     list-style: none;
     font-size: 17px;
-    margin: 0;
+    width: 130px;
+    
 }
 #item-lower #Link:hover{
     background-color: black;
@@ -91,7 +115,7 @@
      color: white;
      transition: all ease .2s;
 }
-  h1 {
+  #h1 {
     font-size: 30px;
     
   }
@@ -128,7 +152,7 @@
         font-size: 16px;
     }
 
-    h1 {
+    #h1 {
         font-size: 28px;
     }
 
@@ -143,8 +167,8 @@
         height: 162vh; 
     }
 
-    #headline {
-        font-size: 18px; /* Smaller font size */
+    #headline #h1 {
+        font-size: 27px; /* Smaller font size */
     }
 
     #innerdiv {
@@ -175,8 +199,10 @@
 
     #headline {
         height: 150px; /* Reduce headline section height */
-        font-size: 16px; /* Smaller font size */
     }
+    #headline h1{
+        font-size: 16px; /* Smaller font size */
+     }
 
     #innerdiv {
          /* Stack grid items in a single column */
@@ -197,9 +223,6 @@
         font-size: 14px; /* Smaller button font size */
     }
 
-    h1 {
-        font-size: 24px; /* Smaller font size for headings */
-    }
 
     p {
         font-size: 16px; /* Adjust paragraph font size */
@@ -212,10 +235,12 @@
         height: 151vh;
         padding: 10px; /* Add padding to avoid content touching edges */
     }
-
+    #headline #h1{
+        font-size: 20px; /* Even smaller font size */
+    }
     #headline {
         height: 130px;
-        font-size: 14px; /* Even smaller font size */
+        width: 95vw;
     }
 
     #innerdiv {

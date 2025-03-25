@@ -22,7 +22,7 @@ function Product() {
   useEffect(() => {
      setTimeout(() => {
       setLoading(false);
-    }, 1000); 
+    }, 500); 
     
   }, []);
 
@@ -42,7 +42,7 @@ function Product() {
           fontSize: "40px",
           marginLeft: "38%",
         }}>
-          <h4>Redirecting...</h4>
+          <h4>Loading...</h4>
         </div>
       </div>
     );
@@ -54,7 +54,9 @@ function Product() {
       {loading ? <Loader /> : (
         <div id='ProMain'>
           <div id="headline">
-            <h1>Our Products</h1>
+          <i class="ri-glasses-2-line"></i>
+          <h1 id='h1'>Shades on,Worries gone</h1>
+         <i class="ri-glasses-2-line"></i>
           </div>
           <div id="innerdiv">
             {data.map((item, index) => (
@@ -65,8 +67,10 @@ function Product() {
                 <div id="item-lower">
                   <h1>{item.Item}</h1>
                   <p>{item.Name}</p>
-                 <Link id="Link"to={`/View/${index}`}>View Details</Link>
+                 <div id="itemslower">
+                  <Link id="Link"to={`/View/${index}`}>View Details</Link>
                   <button onClick={handleNav}>Buy Now</button>
+                 </div>
                 </div>
               </div>
             ))}

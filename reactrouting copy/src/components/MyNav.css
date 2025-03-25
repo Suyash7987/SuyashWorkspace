@@ -1,126 +1,156 @@
 #Nav {
-
   height: 5rem;
   width: 100%;
-  background-color: rgb(230, 243, 255);
+  background-color: rgb(16, 33, 42);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 100px;
-  /* Adjusted padding */
 }
-
+#icons{
+   /* height: 40%; */
+   width: 70%;
+   top: 0%;
+   position: absolute;
+   left: 30%;
+   z-index: 9;
+   display: none;
+   border-bottom-right-radius: 1.1rem;
+   background-color: rgb(74, 133, 128)
+}
 #Nav #nav1 h1 {
   cursor: pointer;
+  color: aliceblue;
 }
 
 #nav2 ul {
   list-style: none;
   display: flex;
-  /* Added flex to align links horizontally */
   gap: 40px;
   font-size: 20px;
-
-
 }
 
 #nav2 #hamburger {
   display: none;
+  color: white;
 }
 
 #nav2 ul li a {
   text-decoration: none;
-  /* Applied directly to links */
-  color: black;
+  color: white;
   font-weight: 545;
   transition: color 0.3s ease-in-out;
 }
 
 .active-link {
   padding: 12px;
-  /* background-color: rgba(69, 60, 226, 0.648); */
   text-decoration: none;
   border-radius: 100px;
-  border: 2px solid rgb(0, 0, 0);
-
-  /* transition: all ease .2s ; */
+  border: 5px solid rgb(226, 144, 144);
 }
 
 .active-link:hover {
 
-  border: 2px solid rgb(0, 0, 0);
-
+  border: 5px solid rgb(228, 169, 169);
 }
 
 @media (max-width: 1200px) {
   #Nav {
     padding: 0 50px;
-    /* Reduce padding for medium screens */
   }
-
+  #icons{
+     display: none;
+  }
   #nav2 ul {
     gap: 30px;
-    /* Reduce gap between navigation items */
     font-size: 18px;
-    /* Reduce font size for better readability */
   }
 }
 
 @media (max-width: 992px) {
   #Nav {
     padding: 0 20px;
-    /* Further reduce padding for smaller screens */
   }
 
   #nav2 ul {
     gap: 20px;
-    /* Reduce gap further */
+
     font-size: 16px;
-    /* Adjust font size */
+
   }
 }
 
 @media (max-width: 768px) {
   #Nav {
     padding: 0 15px;
-    /* Minimal padding on small screens */
   }
-
+  #icons{
+    display: none;
+ }
   #nav2 ul {
     gap: 15px;
-    /* Reduce gap further */
     font-size: 14px;
-    /* Smaller font size */
   }
 }
-
 @media (max-width: 480px) {
   #Nav {
     padding: 0 20px;
-    /* Minimal padding for very small screens */
   }
-
-  #nav2 ul li i {
-    display: initial;
+  .active-link{
+     text-decoration: none;
   }
-
   #nav2 ul {
     flex-direction: column;
     gap: 10px;
     font-size: 12px;
     text-align: center;
-    /* Center-align text */
+    padding: 0;
+    margin: 0; /* To avoid any default padding/margin that may interfere with layout */
   }
-
+ #icon-lower button{
+    border: none;
+    padding: 10px;
+    
+ }
   #nav2 ul li {
-    width: 100%;
-    /* Make each link full-width */
-    display: none;
+    display: none; /* Initially hide the list items */
   }
 
-  #nav2 #hamburger {
-    display: initial;
+  #nav2 #hamburger,
+  #hamburger2 {
+    display: block; /* Display hamburger icons */
     font-size: 25px;
     font-weight: 800;
+    cursor: pointer; /* Make it clickable */
+  }
+  #icons {
+    display:initial;
+    padding: 30px;
+  }
+  #icon-upper {
+    display: flex;
+    justify-content: flex-end;
+  }
+  #icon-lower {
+    display: flex;
+    padding: 25px;
+    flex-direction: column;
+    gap: 3.5rem;
+    list-style: none;
+    text-align: right;
+    align-items: flex-end;
+  }
+  #icon-lower a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+    font-weight: 550;
+    padding: 10px;
+  }
+  .show-icons #icons {
+    display: flex;
+  }
+  .show-icons #nav2 ul li {
+    display: block; /* Show list items when hamburger menu is toggled */
   }
 }

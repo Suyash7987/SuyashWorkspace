@@ -1,25 +1,33 @@
 #Part1{
     height:100%;
     width: 100%;
-    background-color:rgb(230, 243, 255) ;
+    background-color: #E6F3FF;
     /* background-color: red; */
     display: flex;
 
 }
 #part1-Left{
-     height: 120%;
-     width: 50%;
+     width: 50vw;
      background-color: rgb(230, 243, 255);
-     padding: 170px;
+     padding: 150px;
      text-align: left;
      
 }
-
+#part1-Left i{
+     font-size: 20px;
+     font-weight: 530;
+     color: #8D3500 ;
+     text-align: center;
+}
 #part1-Left h1{
      margin-bottom: 20px;
      font-size: 8vh;
+     font-weight: 100;
 }
 #part1-Left h1 span{
+    font-family:fantasy ;
+    font-weight: 100;
+    letter-spacing: 2px;
     color: rgb(171, 97, 97);
 }
 #part1-Left p{
@@ -28,7 +36,7 @@
     font-size: 20px;
 }
 #buttons{
-     margin-right: 250px;
+     width: 70%;
      display: flex;
      justify-content: space-evenly;
 }
@@ -38,52 +46,72 @@
     border: none;
     font-size: 20px;
     font-weight: 530;
-    background-color: black;
+    background-color: rgb(1,110,165);
     color: white;
     cursor: pointer;
 
 }
+#buttons #Button1{
+    background-color: rgb(0,88,141);
+}
 #buttons button:hover{
-    box-shadow: 3px 2px 2px 2px rgb(235, 61, 61);
+    box-shadow: 3px 2px 2px 2px rgb(177, 129, 129);
     transition: all ease .2s;
      
 }
 
 
 #part1-right{
-    height: 119.8%;
+    height: 82vh;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     background-color: rgb(230, 243, 255);
 }
-#part1-right img{
-     margin-top: 10px;
-     height: 700px;
-     margin-left: 280px;
+#part1-right-inner{
+     height: 555px;
+     width: 525px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     border-radius: 30px;
+     background-color: rgb(53,85,97);
 }
+
+
 @media (max-width:1440px){
    #part1-Left {
        padding:80px; /* Reduce padding for medium screens */
-    
+       
    }
    #part1-right img {
        margin-left: 76px; /* Adjust image position */
        height: 500px; /* Adjust image height */
+       justify-content: left;
    }
    #buttons button {
        font-size: 20px; /* Adjust button font size */
-       width: 12rem;
        gap: 5px;
 
    }
+   #part1-right-inner{
+    width: auto;
+    
+
+}
    #buttons {
-       margin-right: 100px; /* Reduce margin */
+       margin-right: 100px; 
+       width: 30vw;
        
    }
 }
 
-@media (max-width:1200px) {
+@media (max-width:1024px) {
    #part1-Left {
-       padding: 30px; /* Reduce padding for medium screens */
+       padding: 63px; /* Reduce padding for medium screens */
    }
 
    #part1-Left h1 {
@@ -93,21 +121,17 @@
    #part1-Left p {
        font-size: 18px; /* Adjust paragraph font size */
    }
-
+   
    #buttons button {
        font-size: 20px; /* Adjust button font size */
        width: 10rem;
        gap: 30px;
 
    }
-
+  
    #buttons {
-       margin-right: 100px; /* Reduce margin */
-   }
-
-   #part1-right img {
-       margin-left: 60px; /* Adjust image position */
-       height: 500px; /* Adjust image height */
+       
+       width: 35vw;
    }
 }
 
@@ -133,7 +157,6 @@
 
     #buttons {
         margin-right: 0; /* Remove margin */
-        flex-direction: column; /* Stack buttons vertically */
         gap: 15px; /* Add gap between buttons */
     }
 
@@ -141,16 +164,12 @@
         width: 100%; /* Full width on smaller screens */
     }
 
-    #part1-right img {
-        margin-left: 0; /* Remove margin */
-        height: 500px; /* Adjust image height */
-        width: 100%; /* Make image responsive */
-    }
+    
 }
 
 @media (max-width: 768px) {
     #part1-Left {
-        padding: 60px; /* Further reduce padding */
+        padding: 68px; /* Further reduce padding */
     }
 
     #part1-Left h1 {
@@ -182,18 +201,22 @@
     }
 
     #part1-Left h1 {
-        font-size: 6vh; /* Larger font size for heading */
+        font-size: 5vh; /* Larger font size for heading */
     }
 
     #part1-Left p {
-        font-size: 12px; /* Adjust font size */
+        font-size: 13px; /* Adjust font size */
     }
-
+    #buttons{
+         /* background: #000; */
+         width: 80vw;
+         align-items: center;
+         
+    }
     #buttons button {
-        font-size: 12px; /* Even smaller font size */
-        padding: 9px 8px; /* Smaller button padding */
+        font-size: 15px; /* Even smaller font size */
         width: 15rem;
-        margin-left: 70px;
+       
     }
 
     #part1-right img {
@@ -201,63 +224,4 @@
         width: 300px;
         margin-left: 50px; /* Remove margin */
     }
-}@media (max-width: 375px) {
-   #Part1{
-         flex-direction: column;
-   }
-   #part1-Left {
-       padding: 30px; /* Minimal padding for very small screens */
-       text-align: center; /* Center-align text */
-   }
-
-   #part1-Left h1 {
-       font-size: 5vh; /* Larger font size for heading */
-   }
-
-   #part1-Left p {
-       font-size: 12px; /* Adjust font size */
-   }
-
-   #buttons button {
-       font-size: 12px; /* Even smaller font size */
-       padding: 9px 8px; /* Smaller button padding */
-       width: 15rem;
-       margin-left: 40px;
-   }
-
-   #part1-right img {
-       height: 345px; /* Adjust image height */
-       width: 250px;
-       margin-left: 60px; /* Remove margin */
-   }
-}
-@media (max-width: 320px) {
-   #Part1{
-         flex-direction: column;
-   }
-   #part1-Left {
-       padding: 30px; /* Minimal padding for very small screens */
-       text-align: center; /* Center-align text */
-   }
-
-   #part1-Left h1 {
-       font-size: 5vh; /* Larger font size for heading */
-   }
-
-   #part1-Left p {
-       font-size: 12px; /* Adjust font size */
-   }
-
-   #buttons button {
-       font-size: 12px; /* Even smaller font size */
-       padding: 9px 8px; /* Smaller button padding */
-       width: 15rem;
-       margin-left: 15px;
-   }
-
-   #part1-right img {
-       height: 345px; /* Adjust image height */
-       width: 250px;
-       margin-left: 40px; /* Remove margin */
-   }
 }

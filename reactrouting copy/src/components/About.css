@@ -5,9 +5,9 @@
 }
 
 #AboutPart1 {
-    height: 600px;
 
     display: flex;
+    padding: 10px;
     /* background-color: rgb(164, 35, 35); */
 }
 
@@ -33,9 +33,11 @@
 #Aboutpart1-right {
     height: 100%;
     width: 60%;
-    padding: 90px 80px;
+    padding: 45px;
     text-align: left;
-    /* background-color: yellow; */
+    color: beige;
+    border-radius: 40px;
+    background-color: #355561;
 }
 
 #Aboutpart1-right p {
@@ -44,22 +46,28 @@
 
 /*  */
 #AboutPart2 {
-    height: 600px;
-
+    
+     padding: 20px;
     display: flex;
+    color: beige;
     /* background-color: rgb(164, 35, 35); */
 }
 
 #Aboutpart2-left {
     height: 100%;
     width: 50%;
-    padding: 30px 25px;
+    padding: 40px;
     /* font-size: 20px; */
-    /* background-color: yellowgreen; */
+    border-radius: 20px;
+    background-color: #f1af6c;
 }
 
-#Aboutpart2-left p {
+#Aboutpart2-left h3 {
     font-size: 22px;
+    color: rgb(49, 38, 22);
+}
+#Aboutpart2-left h1{
+     font-size: 40px;
 }
 
 #Aboutpart2-right img {
@@ -91,20 +99,19 @@
     #Aboutpart1-left,
     #Aboutpart2-left {
         width: 50%;
-        padding: 25px 10px;
+       
     }
 
     #Aboutpart1-right,
     #Aboutpart2-right {
         width: 50%;
-        padding: 70px 1px;
+        padding: 70px;
     }
 
     #Aboutpart1-left img,
     #Aboutpart2-right img {
         width: 80%;
-        margin-left: auto;
-        margin-right: auto;
+      
     }
 
     #Aboutpart1-right h3,
@@ -149,12 +156,14 @@
         padding: 10px 50px;
     }
 
-    #AboutPart1,
-    #AboutPart2 {
+    #AboutPart1 {
         flex-direction: column;
         height: auto;
     }
-
+    #AboutPart2{
+     
+        flex-direction: column-reverse;
+    }
     #Aboutpart1-left,
     #Aboutpart2-left {
         width: 100%;
@@ -196,6 +205,9 @@
     #Aboutpart2-left {
         width: 100%;
         padding: 15px 0;
+    }
+    #AboutPart2{
+        flex-direction: column-reverse;
     }
 
     #Aboutpart1-right h1 {

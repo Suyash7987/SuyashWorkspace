@@ -36,54 +36,49 @@ function Contact() {
           <p>7569842185</p>
           <p>9412658489</p>
         </div>
+
+
         <div id="Middle-Right">
           <h2>Fill out the form and we’ll listen</h2>
+
           <form onSubmit={handleSubmit(onSubmit)}>
+            <div id="one">
             <input className={`form-input ${errors.Name ? "error-border" : ""}`}
               {...register("Name", {
-                required: "Name is required",
+                required: " *Name is required",
               })}
               pattern="[A-Za-z ]{3,30}"
               type="text"
               placeholder="Name"
               title="Should only contains Letter(A-Z,a-Z) and Spaces"
             />
-            <br />
-            <br />
+            
             {errors.Name && (
               <p
-                style={{
-                  position: "absolute",
-                  marginTop: "-2%",
-                  color: "red",
-                }}
               >
                 {errors.Name.message}
               </p>
             )}
+            </div>
+            <div id="two">
             <input className={`form-input ${errors.Name ? "error-border" : ""}`}
               {...register("Email", {
-                required: true,
+                required: "*Email is required",
               })}
               type="email"
               placeholder="Email"
-            />{" "}
-            <br />
-            <br />
+            />
             {errors.Email && (
               <p
-                style={{
-                  position: "absolute",
-                  marginTop: "-2%",
-                  color: "red",
-                }}
               >
-                Email is required
+                {errors.Email.message}
               </p>
             )}
+            </div>
+            <div id="three">
             <input className={`form-input ${errors.Name ? "error-border" : ""}`}
               {...register("Contact", {
-                required: "Contact is Required",
+                required: " *Contact is Required",
               
                 minLength: {
                   value: 10,
@@ -98,19 +93,12 @@ function Contact() {
               type="text"
               placeholder="Contact Number"
             />
-            <br />
-            <br />
             {errors.Contact && (
-              <p
-                style={{
-                  position: "absolute",
-                  marginTop: "-2%",
-                  color: "red",
-                }}
-              >
+              <p>
                 {errors.Contact.message}
               </p>
             )}
+            </div>
             <textarea {...register("Message")} placeholder="Message"></textarea>
             <br /> <br />
             <input type="submit" style={{ width: "100px" }} />

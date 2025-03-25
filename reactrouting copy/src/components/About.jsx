@@ -10,7 +10,7 @@ function About() {
             <img src="typewriter.png" alt="" />
           </div>
           <div id="Aboutpart1-right">
-            <h1>Our story</h1>
+            <h1 style={{color:"pink",fontSize:"50px"}}>Our story</h1>
             <br />
             <h3>
               Founded in 2010, By an ex-Microsoft 'techie' with no money but
@@ -37,7 +37,7 @@ function About() {
 
         <div id="AboutPart2">
           <div id="Aboutpart2-left">
-            <h1>GREAT QUALITY</h1>
+            <h1 style={{color:"#352561"}}>GREAT QUALITY</h1>
             <br />
             <h3>
               Made by robots <br /> <br />
@@ -54,7 +54,7 @@ function About() {
               <br />
               Our people have zero tolerance to error and our call center aims
               to delight every customer, solve their problems and work on their
-              feedbacks.
+              feedbacks Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quam soluta quasi, nihil similique architecto tempora repellendus enim rerum ea porro laudantium autem voluptate cupiditate?
             </h3>
           </div>
           <div id="Aboutpart2-right">

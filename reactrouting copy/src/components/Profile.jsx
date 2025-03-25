@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './Profile.css';
 import { useNavigate } from 'react-router-dom';
 
 function Profile({userLogined,setUserLogined}) {
@@ -10,11 +11,8 @@ function Profile({userLogined,setUserLogined}) {
            navigate('/Login');
     }
   return (
-    <div>
-      Profile
-
-      <button onClick={handleLogout}>Logout</button>
-
+    <div>    
+    <button id ="logout"onClick={handleLogout}>Logout</button>
     </div>
   )
 }

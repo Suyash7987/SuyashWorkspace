@@ -1,5 +1,5 @@
 import React from "react";
-import "./Login.css";
+import "./Signup.css";
 import { useForm } from "react-hook-form";
 import Footer from "./Footer";
 
@@ -76,8 +76,14 @@ function SignUp() {
                   {errors.PassWord.message}
                 </p>
               )}
-              <input type="Submit" />
+              <button>Submit</button>
             </form>
+            <div id="Signup-Lower"
+                         
+            >
+                <p>Already have an account?</p>
+                <button>Login</button>
+              </div>
           </div>
         </div>
       </div>

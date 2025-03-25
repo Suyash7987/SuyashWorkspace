@@ -6,7 +6,7 @@ function Loading({userLogined,setUserLogined}) {
    function Loader(){ 
        setTimeout(() => {
          setLoading(false)
-       }, 1000);
+       }, 500);
        return(
        <div style={{
             height:"950px",
@@ -21,7 +21,7 @@ function Loading({userLogined,setUserLogined}) {
              marginLeft:"38%",
           }}
          >
-            <h4>Redirecting...</h4>
+            <h4>Loading...</h4>
          </div>
        </div> 
      )

@@ -1,6 +1,7 @@
 import React from "react";
 import { data } from "./Product.jsx";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+
 import './View.css';
 
 function View() {
@@ -32,27 +33,41 @@ function View() {
         <div id="Viewmain-right">
            <div id="Viewman-right-upper">
               <h1>{product.Name} {product.caption}</h1>
+              <div id="stars">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+              </div>
               <h2>*MRP:{product.MRP}</h2>
               <h3>Inclusive all Taxes</h3>
               <h4> Hurry up..!! 5700+ Already bought this </h4>
            </div>
            <div id="Viewmain-right-Middle">
               <h3>Description</h3>
-              <p> Sunglasses from Tees By Fastrack. Shades are designed to save your eyes from harmful UV rays while providing best in class style. (M8022GR7V). Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo obcaecati nesciunt nemo repudiandae unde optio! Quo porro quibusdam et consequuntur.</p>
+              <p id="p"> Sunglasses from Tees By Fastrack. Shades are designed to save your eyes from harmful UV rays while providing best in class style. (M8022GR7V). Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo obcaecati nesciunt nemo repudiandae unde optio! Quo porro quibusdam et consequuntur.</p>
            </div>
            <div id="Viewmain-right-Lower">
-            <div id="Viewmain-right-Lower-left">
-            <i class="ri-calendar-schedule-line"></i>
-             <h4>7 Days return</h4>   
-           </div>
-           <div id="Viewmain-right-Lower-right">
-           <i class="ri-verified-badge-line"></i>
-             <h4>100% Genuine Product</h4>   
-           </div>
+             <div id="Viewmain-right-Lower1">
+             <i id="eye" class="ri-eye-fill"></i>
+              <h3>Eye Exam</h3>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <Link id="Link">Learn More</Link>
+             </div>
+             <div id="Viewmain-right-Lower1">
+             <i id="eye" class="ri-glasses-2-line"></i>
+              <h3>Lense Fitting</h3>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <Link id="Link">Learn More</Link>
+              </div>
+              <div id="Viewmain-right-Lower1">
+              <i id="eye" class="ri-id-card-line"></i>
+              <h3>Virtual Try-on</h3>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <Link id="Link">Learn More</Link>
+              </div>
            </div>
            <div id="Viewmain-right-Lower2">
               <button>Add to Cart</button>
               <button>Buy Now</button>
+              <button>Save</button>
            </div>
         </div>
       </div>      

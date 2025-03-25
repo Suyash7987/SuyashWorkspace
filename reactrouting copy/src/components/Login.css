@@ -39,12 +39,13 @@
 }
 
 #Login-Right{
-   height: 100%;
-   width: 50%;
-   padding: 20px;
-   /* background-color: rgb(35, 210, 155); */
+    height: 100%;
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
-#Login-Right h1{
+    #Login-Right h1{
     margin-bottom: 14px;
     font-weight: 540;
 }
@@ -97,7 +98,7 @@
  #Login-Right form button{
    width: 59%;
    padding: 12px;
-   background: #8753FF;
+   background-image: linear-gradient(to left, #fdc0b0, #cf5a00);
    color: white;
    font-size: 18px;
    margin-left: 80px;
@@ -107,8 +108,8 @@
    transition: 0.3s;
  }
   button:hover{
-   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
-
+   box-shadow: 5px 5px 10px rgb(120, 213, 236);
+   background-image: linear-gradient(to left, #ffc917, #11cc4f);
   }
  input[type="submit"]:hover {
   
@@ -149,11 +150,7 @@
     }
 }
 
-/* @media (min-width:1400px){
-    #Login-Right form button{ 
-        width: 50%;
-    }
-} */
+
  @media (max-width: 1200px) {
     #Loginpage {
         padding: 50px 150px;
@@ -240,9 +237,10 @@
     #Login-Right {
         width: 75%;
         height: 750px;
-        padding: 10px;
+        padding: 25px;
         text-align: center;
         margin-left: 100px;
+        background-color: white;
     }
     #Login-Right p{
          left: 175px;

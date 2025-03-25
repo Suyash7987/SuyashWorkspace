@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
-import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
+import Footer from "./Footer";
 
 function Home() {
 
@@ -15,10 +15,14 @@ function Home() {
   function handleStart(){
       navigate('/SignUp')
   }
+  
   return (
     <>
+ 
       <div id="Part1">
         <div id="part1-Left">
+         <i class="ri-eye-line"> OPTUM - GLASSES AND EYEWEAR</i>
+          
           <h1>
             A <span>personalized</span> eyewear shopping experience
           </h1>
@@ -28,12 +32,14 @@ function Home() {
             aliquam sint temporibus quidem, quia, autem vel?
           </p>
           <div id="buttons">
-            <button onClick={handleStart}>Get started</button>
-            <button onClick={handleclick}>See product Demo</button>
+            <button id="Button1" onClick={handleStart}>Get started</button>
+            <button onClick={handleclick}>See product</button>
           </div>
         </div>
         <div id="part1-right">
-          <img src="glass.png" alt="" />
+          <div id="part1-right-inner">
+             <img src="glass.png" alt="" />
+          </div>
         </div>
       </div>
       <Footer />

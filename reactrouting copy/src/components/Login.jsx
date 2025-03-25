@@ -16,7 +16,7 @@ function Login({ setUserLogined }) {
     if (UserName === UserCred.Name && Password === UserCred.password) {
       localStorage.setItem("userLogined", "true");
       setUserLogined(true);
-      navigate("/Product");
+      navigate("/Profile");
     }
   }
 

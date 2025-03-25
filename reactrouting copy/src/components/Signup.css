@@ -72,28 +72,38 @@
  input[type="password"]::placeholder {
    color: rgba(0, 0, 0, 0.7);
  }
- 
- /* input[type="text"]:focus,
- input[type="password"]:focus {
-   background: rgba(255, 255, 255, 0.3);
- } */
- 
 
- 
-#Login-Right form input[type="submit"] {
-   width: 50%;
-   padding: 12px;
-   background: #8753FF;
-   color: white;
-   font-size: 18px;
-   margin-left: 80px;
-
-   font-weight: 500;
-   border: none;
-   border-radius: 5px;
-   cursor: pointer;
-   transition: 0.3s;
- }
+ #Signup-Lower{
+       padding: 20px;
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+       justify-content: center;
+       align-items: center;   
+}
+#Signup-Lower button{
+     width: 60%;
+     padding: 10px;
+     border: none;
+     font-size: 18px;
+     background-color: #db8771;
+}
+ #Login-Right form button{
+    width: 59%;
+    padding: 12px;
+    background-image: linear-gradient(to left, #fdc0b0, #cf5a00);
+    color: white;
+    font-size: 18px;
+    margin-left: 80px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+   button:hover{
+    box-shadow: 5px 5px 10px rgb(120, 213, 236);
+    background-image: linear-gradient(to left, #ffc917, #11cc4f);
+   }
  
  input[type="submit"]:hover {
   
@@ -187,8 +197,9 @@
 }
 
 @media(max-width: 768px) {
-    #Loginpage {
+    #Signpage {
         padding: 50px 30px;
+        height: 768px;
     }
     #Login {
         width: 100%;
@@ -212,9 +223,11 @@
     }
     #Login-Right {
         width: 75%;
+        height: 750px;
         padding: 10px;
         text-align: center;
         margin-left: 100px;
+        background-color: white;
     }
     #Login-Right p{
          left: 175px;
