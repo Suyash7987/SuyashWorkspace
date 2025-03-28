@@ -47,7 +47,7 @@
     background-color: rgba(224, 200, 140, 0.725);
     border-radius: 20px; /* Optional rounded corners */
     text-align: center;
-    height: 450px;
+   
     width: 340px;
   }
   
@@ -68,10 +68,13 @@
   #item-lower {
     /* background-color: rgb(22, 224, 184); */
     width: 100%;
-    gap: 20px;   
-    display: flex;
+    gap: 11px;
+    display: flex
+;
+    margin-top: 10px;
     flex-direction: column;
-    align-items: center;   
+    align-items: center;
+    padding: 10px;
   }
   #itemslower
   {

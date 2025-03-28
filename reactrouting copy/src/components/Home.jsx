@@ -13,7 +13,7 @@ function Home() {
 
   }
   function handleStart(){
-      navigate('/SignUp')
+      navigate('/Login')
   }
   
   return (

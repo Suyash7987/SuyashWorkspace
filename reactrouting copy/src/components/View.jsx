@@ -48,19 +48,19 @@ function View() {
              <div id="Viewmain-right-Lower1">
              <i id="eye" class="ri-eye-fill"></i>
               <h3>Eye Exam</h3>
-              <p>Lorem ipsum dolor sit amet.</p>
+              <p className="para">Lorem ipsum dolor sit amet.</p>
               <Link id="Link">Learn More</Link>
              </div>
              <div id="Viewmain-right-Lower1">
              <i id="eye" class="ri-glasses-2-line"></i>
               <h3>Lense Fitting</h3>
-              <p>Lorem ipsum dolor sit amet.</p>
+              <p className="para">Lorem ipsum dolor sit amet.</p>
               <Link id="Link">Learn More</Link>
               </div>
               <div id="Viewmain-right-Lower1">
               <i id="eye" class="ri-id-card-line"></i>
               <h3>Virtual Try-on</h3>
-              <p>Lorem ipsum dolor sit amet.</p>
+              <p className="para">Lorem ipsum dolor sit amet.</p>
               <Link id="Link">Learn More</Link>
               </div>
            </div>

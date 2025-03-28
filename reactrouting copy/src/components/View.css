@@ -1,7 +1,5 @@
-#Viewmain
-{
-     
-     width: 100vw;
+#Viewmain{
+      width: 100vw;
      /* background-color: palegreen; */
      padding: 50px;
      display: flex;
@@ -15,6 +13,7 @@
    display: flex;
    padding: 80px;
    border-radius: 20px;
+   gap: 1.2rem;
    align-items: center;
    justify-content: space-around;   
    flex-direction: column;
@@ -44,7 +43,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 20px;
     background-color: aliceblue;
 }
@@ -151,6 +150,8 @@
      border: none;
      font-size: 20px;
      border-radius: 20px;
+     background-color: coral;
+     color: beige;
 }
 #Viewmain-right-Lower2 button:hover{
      scale: 1.04;
@@ -208,6 +209,9 @@
           padding: 8px 10px;
           width: 29vw;
      }
+     .para{
+           font-size: .8rem;
+     }
      #p {
           font-size: 14px;
       }
@@ -260,7 +264,7 @@
            flex-direction: column;
      }
      #Viewmain-right{
-         height: 82vh;
+         /* height: 82vh; */
          width: 85vw;
      }
      #Viewman-right-upper
@@ -319,13 +323,12 @@
          width: 12vw;
      }
 }
-@media(max-width:500px){
+@media(max-width:480px){
      #Viewmain{
            flex-direction: column;
            align-items: center;
      }
      #Viewmain-right{
-         height: 110vh;
          width: 85vw;
      }
      #Viewman-right-upper
@@ -349,12 +352,13 @@
          gap: 9px;
      }
      #Viewmain-right-Lower{
-          height: 40vh;
+          height: 52vh;
           flex-direction: column;
-          padding: 3%
+          padding: 2%;
+          justify-content: center;
      }
      #Viewmain-right-Lower1{
-          height: 15vh;
+          height: 14vh;
           padding: 0px;
           text-align: center;
      }
@@ -387,9 +391,7 @@
      #Viewmain-left-bottom{
           width:76vw;
      }
-     
      #Colorbox{
-         height: 8vh;
          width: 19vw;
      }
 }

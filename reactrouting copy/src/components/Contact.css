@@ -1,7 +1,7 @@
 #ContactUpper{
     height:300px;
     width: 100%;
-    background-color:rgb(144, 198, 249);
+    background-color:rgb(255, 255, 255);
 }
 #ContactUpper img
 {
@@ -12,11 +12,11 @@
 }
 #Contactupperheading {
    position: absolute; 
-   top: 80px;             
+   top: 80px;          
    left: 0;            
    width: 100%;        
    height: 300px;      
-   background-color: rgba(1, 1, 1, 0.318);   
+   background-color: rgba(1, 1, 1, 0.318); 
    color: white;       
    display: flex;
    flex-direction: column;
@@ -26,9 +26,8 @@
    font-size: 24px;
    gap: 20px;
  }
-
  #ContactMiddle{
-   background-color: rgb(230, 243, 255);  
+   background-color: rgb(255, 255, 255);  
    display: flex;
    padding: 70px;
    justify-content: center;
@@ -36,11 +35,12 @@
 } 
  #Middle-Left{
      width:571px;
-     border: 2px solid black;
+     background-color: #ED3348;
+     color: white;
+     border-radius: 10px;
      padding: 40px;
      display: flex;
      flex-direction: column;
-     text-align: center;
      gap: 20px;
  }
  #Middle-Left h2{ 
@@ -49,61 +49,51 @@
  }
  #Middle-Left p{
     font-size: 20px;
+
  }
  #Middle-Left i{
-    font-size: 4.5vh;
-    color: brown;
+    font-size: 6vh;
+    color: rgb(255, 255, 255);
  }
  #Middle-Right{
    padding: 15px 30px;
-   display: flex;
-   flex-direction: column;
    text-align: center;
-   border: 2px solid black;
-}
-#one #two #three{
-     display: flex;
-     flex-direction: column;  
-}
-#one p{
-     text-align: left;
-     color: red;
-     margin-top: -8px;
+   width: 45%;
+   background-color: rgb(247, 247, 234);
+   border: 2px solid rgba(0, 0, 0, 0.466);
+   border-radius: 20px;
 }
 
-#two p{
-     color: red;
-     text-align: left;
-    margin-top: -8px;
-}
-
-#three p{
-     color: red;
-     text-align: left;
-    margin-top: -8px;
-}
+#Middle-Right p{
+    color: #8D3518;
+    font-size: 15px;
+    text-align: left;
+ }
 #Middle-Right h2{
-   padding: 25px;
+   padding: 15px;
 }
+#one,#two,#three{
+     text-align: left;
+     margin-bottom: 15px;
+    }
 #Middle-Right form input,
 #Middle-Right form textarea {
    width: 100%;
    padding: 12px;
-   margin-bottom: 15px;
-   border: 2px solid #ccc;
+   border: 2px solid #d3cccc;
    border-radius: 8px;
+   background-color: rgb(243, 243, 243);
    font-size: 16px;
-   /* transition: all 0.3s ease-in-out; */
 }
 #Middle-Right form input:focus
 {
-        outline: 1px solid #4CAF50;
+        border: 2px solid #15b61a;
 } 
 
 .form-input {
    width: 100%;
    padding: 10px;
-   border: 2px solid #ccc; /* Default border */
+   border: 2px solid #000000; 
    border-radius: 5px;
    outline: none;
  }
@@ -118,7 +108,7 @@
 }
 
 #Middle-Right form button {
-   background-color: #4CAF50;
+   background-color: #ED3348;
    color: white;
    font-size: 18px;
    padding: 12px 25px;
@@ -127,132 +117,82 @@
    cursor: pointer;
    transition: background-color 0.3s ease;
 }
-#one #two #three{
-     text-align: left;
-}
+
 #Middle-Right form button:hover {
    background-color: #45a049;
 }
 
 #Middle-Right form textarea {
    resize: vertical;
-   /* min-height: 100px; */
-}
-@media (max-width: 1200px) {
-   #ContactMiddle {
-       padding: 10px 100px; /* Reduce padding for medium screens */
-   }
-
-   #Middle-Left {
-       width: 48%; /* Reduce width for smaller screens */
-   }
-
-   #Middle-Right {
-       width: 48%; /* Reduce width for smaller screens */
-   }
-
-   #Middle-Left h2 {
-       font-size: 35px; /* Adjust font size */
-   }
-
-   #Middle-Left p {
-       font-size: 18px; /* Adjust font size */
-   }
-
-   #Middle-Left i {
-       font-size: 4vh; /* Adjust icon size */
-   }
-
-   #Middle-Right form input,
-   #Middle-Right form textarea {
-       font-size: 15px; /* Reduce font size for inputs */
-   }
-
-   #Middle-Right form button {
-       font-size: px; /* Adjust button font size */
-       
-   }
-}
-
-@media (max-width: 992px) {
-   #ContactMiddle {
-       padding: 10px 50px; /* Further reduce padding for smaller screens */
-   }
-   #Middle-Left,
-   #Middle-Right {
-       width: 100%; /* Stack elements vertically on smaller screens */
-       margin-bottom: 20px; /* Add space between sections */
-   }
-   #Middle-Left h2 {
-       font-size: 30px; /* Further reduce font size */
-   }
-   #Middle-Left p {
-       font-size: 16px; /* Further reduce font size */
-   }
-   #Middle-Left i {
-       font-size: 3.5vh; /* Reduce icon size */
-   }
-   #Middle-Right form input,
-   #Middle-Right form textarea {
-       font-size: 14px; /* Reduce font size for inputs */
-   }
-
-   #Middle-Right form button {
-       font-size: 15px; /* Reduce button font size */
-   }
 }
 @media (max-width: 768px) {
    #ContactMiddle {
-       padding: 10px 20px; /* Minimal padding for small screens */
-   }
+       padding: 10px 20px;    }
+
    #Middle-Left,
    #Middle-Right {
-       width: 100%; /* Stack elements vertically */
+       width: 100%; 
+       text-align: center;
    }
+
    #Middle-Left h2 {
-       font-size: 28px; /* Smaller font size for headings */
+       font-size: 28px; 
    }
+
    #Middle-Left p {
-       font-size: 14px; /* Smaller font size for paragraphs */
+       font-size: 14px; 
    }
+
    #Middle-Left i {
-       font-size: 3vh; /* Smaller icon size */
+       font-size: 3vh; 
    }
- #Middle-Right form input,
+
+   #Middle-Right form input,
    #Middle-Right form textarea {
-       font-size: 14px; /* Adjust input font size */
-   }
+       font-size: 14px;
+       }
+
    #Middle-Right form button {
-       font-size: 14px; /* Adjust button font size */
+       font-size: 14px;
    }
 }
+
 @media (max-width: 480px) {
    #ContactMiddle {
-       padding: 10px; /* Minimal padding for very small screens */
-       flex-direction: column;
+       padding: 10px; 
+              flex-direction: column;
+   }
+   #ContactMiddle #Middle-left{
+      text-align: center;
    }
    #Middle-Left h2 {
-       font-size: 24px; /* Further reduce font size for very small screens */    
+       font-size: 24px; 
    }
+   #one,#two,#three{
+    text-align: left;
+}
    #Middle-Left p {
-       font-size: 12px; /* Very small font size */
+       font-size: 15px; 
    }
+
    #Middle-Left i {
-       font-size: 2.5vh; /* Smaller icon size */
+       font-size: 2.5rem; 
+       color: beige;
    }
   #Middle-right{
      height: 120px;
-  } 
+  }
+  
   #Middle-Right h2{
    margin-bottom: 10px;
 }
    #Middle-Right form input,
    #Middle-Right form textarea {
-       font-size: 12px; /* Adjust font size for inputs */
+       font-size: 12px; 
    }
+
    #Middle-Right form button {
-       font-size: 13px; /* Adjust button font size */
-       
+       font-size: 13px;      
    }
    .ContactFooter{
      display: none;  

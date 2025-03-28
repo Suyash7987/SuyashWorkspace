@@ -1,46 +1,60 @@
 #Loginpage{
-    height: 600px;
     background-color: rgb(230, 243, 255); 
     padding: 50px 260px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
 }
 #Login{
-    height: 450px;
     width: 850px;
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
     display: flex;
-    position: relative;
+    
 }
-#upperlogin{
-   height: 100%;
-   width: 50%;
-   background-color: rgba(0, 0, 0, 0);
-   position: absolute;
-   padding:  195px 50px;
-   text-align: left;
+#Login1,#Login2{
+    display: flex;
+    flex-direction: column;
+     text-align: left;
+     margin-bottom: 15px;
 }
-#upperlogin h1{
-  color: rgb(255, 255, 255);
-  font-style:normal;
-  font-size: 50px;
-  line-height: 50px;
+#ConfirmPassword p{
+    font-size: 14px;
+    color: red;
 }
-
+#Login1 p,#Login2 p{
+    font-size: 14px;
+    color:red
+}
 #Login-Left{
-    height: 100%;
-    width: 50%;
-    /* background-color: orange; */
+    width: 55%;
+    background-color: #0E484C;
 }
-#Login-Left img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 20px;
+#Login-Left-Upper{
+     padding: 20px 20px;
+     color: white;
+     font-size: 2rem;
 }
-
+#Login-Left-Lower span{
+     font-family:serif;
+     color: rgb(255, 121, 26);
+}
+#Login-Left-Lower
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    padding: 60px 9px;
+    font-size: 1.3rem ;
+    color: rgb(177, 247, 247);
+}
+#Login-Left-Lower p{
+    font-family:'Times New Roman', Times, serif;
+    color:coral;
+}
 #Login-Right{
-    height: 100%;
-    width: 50%;
+     width: 50%;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -54,12 +68,16 @@
    color: rgb(100, 92, 92);
    font-weight: 520;
 }
-
+#Login-Right form{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     
+}
  #Login-Right form input {
-   width:65%;
+   width:100%;
    padding: 10px;
-   margin-bottom: 15px;
-   margin-left: 45px;
+   margin-bottom: 0px;
    border: 1.5px solid rgba(0, 0, 0, 0.282);
    border-radius: 5px;
    font-size: 14px;
@@ -73,91 +91,46 @@
  input[type="password"]::placeholder {
    color: rgba(0, 0, 0, 0.7);
  }
- 
- /* input[type="text"]:focus,
- input[type="password"]:focus {
-   background: rgba(255, 255, 255, 0.3);
- } */
- 
 
- 
-#Login-Right form input[type="submit"] {
-   width: 50%;
+#Login-right a{
+    width: 58%;
+    padding: px 0px;
+ }
+ #Login-Right form a{
+    /* width: 41%; */
+    padding: 12px;
+    /* background: #8753FF; */
+    /* color: white; */
+    font-size: 17px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+ }
+ #Login-Right form button{ 
+   width: 41%;
    padding: 12px;
-   background: #8753FF;
-   color: white;
+   background: #ffffff;
+   color: rgb(202, 114, 253);
    font-size: 18px;
-   margin-left: 80px;
-
-   font-weight: 500;
-   border: none;
+   border: 1.5px solid rgb(202, 114, 253);
+   margin-top: 5px;
    border-radius: 5px;
    cursor: pointer;
    transition: 0.3s;
  }
- #Login-Right form button{
-   width: 59%;
-   padding: 12px;
-   background-image: linear-gradient(to left, #fdc0b0, #cf5a00);
-   color: white;
-   font-size: 18px;
-   margin-left: 80px;
-   border: none;
-   border-radius: 5px;
-   cursor: pointer;
-   transition: 0.3s;
- }
-  button:hover{
-   box-shadow: 5px 5px 10px rgb(120, 213, 236);
-   background-image: linear-gradient(to left, #ffc917, #11cc4f);
-  }
- input[type="submit"]:hover {
-  
+ #Login-Right form button:hover{
    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
- }
- @media (min-width:2000px) {
-    #Loginpage {
-        padding: 50px 150px;
-    }
-    #Login {
-        width: 850px;
-        height: 500px;
-        margin-left: 520px;
-    }
-    #upperlogin {
-        padding: 200px 50px;
-    }
-    #upperlogin h1 {
-        font-size: 40px;
-    }
-    #Login-Left img {
-        border-radius: 15px;
-    }
-    #Login-Right{
-         padding: 50px;
-    }
-    #Login-Right form input {
-        width: 75%;
-        font-size: 15px;
-        margin-left: 20px;
-    }
-    #Login-Right form input[type="submit"] ,button {
-        width: 60%;
-        margin-left: 45px;
-    }
-    #Login-Right form button{ 
-        margin-left: 48px;
-    }
-}
-
-
+   background-color: rgb(202, 114, 253);
+   color:white;
+  }
+ 
  @media (max-width: 1200px) {
     #Loginpage {
         padding: 50px 150px;
     }
     #Login {
         width: 700px;
-        height: 400px;
+        
     }
     #upperlogin {
         padding: 150px 30px;
@@ -169,15 +142,15 @@
         border-radius: 15px;
     }
     #Login-Right form input {
-        width: 60%;
-        margin-left: 20px;
+        width: 90%;
+        margin-left: 0px;
     }
     #Login-Right form input[type="submit"],button {
         width: 60%;
         margin-left: 20px;
     }
     #Login-Right form  button{
-           margin-left: 20px ;
+           margin-left: 0px ;
     }
 }
 
@@ -212,12 +185,13 @@
 @media(max-width: 768px) {
     #Loginpage {
         padding: 50px 30px;
-        height: 700px;
+        /* height: 700px; */
     }
     #Login {
         width: 100%;
         height: 40%;
         flex-direction: column;
+        gap: 10px;
     }
     #upperlogin {
         padding: 80px 20px;
@@ -234,9 +208,13 @@
         width: 100%;
         border-radius: 10px;
     }
+    #Login-Right form{
+         align-items: center;
+         gap: 1px;
+    }
     #Login-Right {
-        width: 75%;
-        height: 750px;
+        width: 70%;
+        /* height: 750px; */
         padding: 25px;
         text-align: center;
         margin-left: 100px;
@@ -246,17 +224,11 @@
          left: 175px;
     }
     #Login-Right form input {
-        width: 60%;
-        margin-left: 0;
-    }
-    #Login-Right form input[type="submit"] {
-        width: 50%;
-        margin-left: 0.5px;
+        width: 100%;
     }
     #Login-Right form button{
-         margin-left: 0px;
-         margin-top: -20px;
-         width: 50%;
+         margin-top: 0px;
+         width: 30%;
     }
 }
 
@@ -294,18 +266,19 @@
         height: 500px;
         padding:  60px 20px;
         text-align: center;
-        margin-left: 6px;
+        margin-left: 0px;
     }
     #Login-Right p{
          left: 10px;
              
     }
+    #Login-Right form button{
+        margin-top: 0px;
+        width: 30%;
+   }
     #Login-Right form input {
-        width: 65%;
-        margin-left: 0;
+        width: 100%;
+        
     }
-    #Login-Right form input[type="submit"] {
-        width: 50%;
-        margin-left: 0.5px;
-    }
+    
 }

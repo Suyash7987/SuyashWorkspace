@@ -11,8 +11,10 @@ function Profile({userLogined,setUserLogined}) {
            navigate('/Login');
     }
   return (
-    <div>    
-    <button id ="logout"onClick={handleLogout}>Logout</button>
+    <div id='Profile'>
+            <i class="ri-tools-fill"></i>
+           <h1>The Profile Section is in Devlopment</h1>
+           <button id ="logout"onClick={handleLogout}>Logout</button>
     </div>
   )
 }

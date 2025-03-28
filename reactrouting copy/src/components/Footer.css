@@ -12,9 +12,15 @@
     line-height: 4.5vh;
     
 }
+#main5in3,#main5in4,#main5in5 {
+    font-size: 17px;
+    text-align: center;
+    width: 100%;
+    
+}
 #main5in2{
     /* background-color: aqua; */
-    width: 20vw;
+    /* width: 20vw; */
     display: flex;
     gap: 15px;
     flex-direction: column;
@@ -57,7 +63,8 @@
 
 @media (max-width: 1440px) {
     .maincontent5 {
-        padding: 2vh 2vh;
+        padding: 3vh 2vh;
+        gap: 42px;
         /* Reduce padding for medium screens */
     }
 
@@ -73,7 +80,7 @@
         /* Further reduce padding on smaller screens */
     
         /* Stack the elements vertically */
-        height: auto;
+        /* height: auto; */
         gap: 0px;
     }
 
@@ -94,8 +101,23 @@
         gap: 10px;
 
     }
-
-
+    #main5in5in i {
+        font-size: 20px;
+    }
+    #main5in3,#main5in4,#main5in5{
+        font-size: px;
+        text-align: center;
+        width: 100%;
+    }
+  p{
+    font-size: 11px;
+  }
+  #main5in4,#main5in3,#main5in2{
+    font-size: 11px;
+  }
+  #main5in2 i{
+     font-size: 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -103,23 +125,41 @@
         padding: 2vh 2vh;
         /* Minimal padding on the smallest screens */
   align-items: center;
+  gap: 50px;
         /* Center align text */
         flex-direction: column;
     }
-
-    #main5in2,
-    #main5in3,
-    #main5in4,
-    #main5in5 {
+    #main5in2{
         line-height: 4vh;
-      align-items: center;
-        /* Adjust line height for readability */
+        align-items: flex-start;
+        width: 100%;
+        text-align: left;
+        font-size: 15px;
     }
-
+    #main5in2 i{
+      font-size: 37px;
+    }
+   
+    #main5in3,#main5in4,#main5in5{
+        font-size:16px;
+        text-align: left;
+        width: 100%;
+    }
+    #main5in2-ic{
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+    }
+    #main5in5 p{
+        font-size: 15px;
+        text-align: left;
+        width: 100%;
+    }
     #main5in5in {
         font-size: 14px;
-        /* Further reduce font size */
         gap: 5px;
-        /* Minimal gap between elements */
+        width: 100%;
+        text-align: left;
+          
     }
 }

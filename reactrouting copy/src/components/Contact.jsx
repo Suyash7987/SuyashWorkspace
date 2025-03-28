@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import "./Contact.css";
+import {app} from"../firebase"
+import {getDatabase,ref,set} from "firebase/database"
 import Footer from "./Footer";
+
+const db =getDatabase(app)
 function Contact() {
+  const [Name, setName] = useState("")
+  const [Email, setEmail] = useState("")
+  const [Contact, setContact] = useState("")
+  const [Message, setMessage] = useState("")
+
+
+  const putdata=()=>{
+    set(ref(db,'users/suyash'),{
+         
+          name:{Name},
+          Email:{Email},
+          Contact:{Contact},
+          Message:{Message}
+          
+    });
+
+  };
   const {
     register,
     handleSubmit,
@@ -36,10 +57,9 @@ function Contact() {
           <p>7569842185</p>
           <p>9412658489</p>
         </div>
-
-
         <div id="Middle-Right">
-          <h2>Fill out the form and we’ll listen</h2>
+          <h4>Share your thoughts we’d Love to listen</h4>
+          <h2>Let's Talk</h2>
 
           <form onSubmit={handleSubmit(onSubmit)}>
             <div id="one">
@@ -50,12 +70,11 @@ function Contact() {
               pattern="[A-Za-z ]{3,30}"
               type="text"
               placeholder="Name"
+              onChange={(e)=>setName(e.target.value)}
               title="Should only contains Letter(A-Z,a-Z) and Spaces"
             />
-            
             {errors.Name && (
-              <p
-              >
+              <p>
                 {errors.Name.message}
               </p>
             )}
@@ -66,13 +85,11 @@ function Contact() {
                 required: "*Email is required",
               })}
               type="email"
+              onChange={(e)=>setEmail(e.target.value)}
               placeholder="Email"
             />
             {errors.Email && (
-              <p
-              >
-                {errors.Email.message}
-              </p>
+              <p>{errors.Email.message}</p>
             )}
             </div>
             <div id="three">
@@ -91,6 +108,7 @@ function Contact() {
               })}
               pattern="[0-9 ]{10}"
               type="text"
+              onChange={(e)=>setContact(e.target.value)}
               placeholder="Contact Number"
             />
             {errors.Contact && (
@@ -99,9 +117,9 @@ function Contact() {
               </p>
             )}
             </div>
-            <textarea {...register("Message")} placeholder="Message"></textarea>
+            <textarea {...register("Message")} placeholder="Message" onChange={(e)=>setMessage(e.target.value)}></textarea>
             <br /> <br />
-            <input type="submit" style={{ width: "100px" }} />
+            <button onClick={putdata}>Submit</button>
           </form>
         </div>
       </div>

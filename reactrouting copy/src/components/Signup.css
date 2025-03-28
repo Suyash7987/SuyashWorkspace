@@ -1,4 +1,4 @@
-#Loginpage{
+/* #Loginpage{
     height: 600px;
     background-color: rgb(230, 243, 255); 
     padding: 50px 260px;
@@ -29,7 +29,7 @@
 #Login-Left{
     height: 100%;
     width: 50%;
-    /* background-color: orange; */
+
 }
 #Login-Left img{
     height: 100%;
@@ -42,7 +42,7 @@
    height: 100%;
    width: 50%;
    padding: 20px;
-   /* background-color: rgb(35, 210, 155); */
+
 }
 #Login-Right h1{
     margin-bottom: 14px;
@@ -290,4 +290,4 @@
         width: 50%;
         margin-left: 0.5px;
     }
-}
+} */

@@ -1,0 +1,37 @@
+#CartMain
+{
+  height: 92vh;
+  width: 100%;
+  background-color: aqua;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#CartUpper{
+     width: 100%;
+     text-align: center;
+     background-color: white;
+  
+}
+#MainCart{
+     background-color: yellow;
+     display: flex;
+     align-items: center;
+     
+}
+#MainCart1{
+    width: 20%;
+    background-color: pink;
+}
+
+#MainCart1 #img{
+   width: 50%;
+   object-fit: cover;
+}
+#MainCart1-2{
+     display: flex;
+     width: 50%;
+     align-items: center;
+     justify-content: space-around;
+}

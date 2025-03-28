@@ -88,8 +88,7 @@
        
    }
    #part1-right img {
-       margin-left: 76px; /* Adjust image position */
-       height: 500px; /* Adjust image height */
+    
        justify-content: left;
    }
    #buttons button {
@@ -173,7 +172,7 @@
     }
 
     #part1-Left h1 {
-        font-size: 4vh; /* Smaller font size */
+        font-size: 6vh; /* Smaller font size */
     }
 
     #part1-Left p {
