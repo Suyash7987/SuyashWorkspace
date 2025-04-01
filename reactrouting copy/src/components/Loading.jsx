@@ -1,13 +1,17 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Login from './Login';
 import "./Loading.css";
 function Loading({userLogined,setUserLogined,handleLoginSuccess}) {
-   const [Loading, setLoading] = useState(true)
+   const [isLoading, setisLoading] = useState(true)
   
    function Loader(){ 
-       setTimeout(() => {
-         setLoading(false)
-       }, 500);
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setisLoading(false);
+      }, 500);
+      return () => clearTimeout(timer); // Cleanup function
+    }, []);
+    
        return(
        <div style={{
             height:"950px",
@@ -30,7 +34,7 @@ function Loading({userLogined,setUserLogined,handleLoginSuccess}) {
    
    return (
     <>
-      {Loading?<Loader/> :
+      {isLoading?<Loader/> :
         <Login userLogined={userLogined} setUserLogined={setUserLogined} handleLoginSuccess={handleLoginSuccess} /> 
       }
     </>

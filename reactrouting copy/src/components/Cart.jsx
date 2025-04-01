@@ -1,25 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import "./Cart.css";
+import { useNavigate } from 'react-router-dom';
 
 function Cart() {
   const [cartItems, setCartItems] = useState([]);
-
+   const  navigate =useNavigate();
+  function goproduct(){
+      navigate('/Product');
+  }
   useEffect(() => {
-    // Retrieve cart items from localStorage
+    
     const savedItems = localStorage.getItem("cartItems");
 
     if (savedItems) {
-      // Split the string by commas to get individual items
+      
       const itemsArray = savedItems.split(",").map(item => {
         const itemProperties = item.split("|");
         return {
           Item: itemProperties[0],
           Name: itemProperties[1],
-          // Convert MRP to a number by removing the '$' symbol and parsing it as a float
-          MRP: parseFloat(itemProperties[2].replace('$', '')), // This removes the $ sign and converts to float
+          
+          MRP: parseFloat(itemProperties[2].replace('$', '')),
           caption: itemProperties[3],
           img: itemProperties[4],
-          quantity: 1 // Initialize the quantity to 1 by default
+          quantity: 1 
         };
       });
       setCartItems(itemsArray);
@@ -68,11 +72,17 @@ function Cart() {
   return (
     <div id="CartMain">
       <div id="CartUpper">
-        <h1>Cart</h1>
         {cartItems.length === 0 ? (
-          <p>Your cart is empty.</p>
+         <div id='CartUpper1'>
+          <h2>"Your cart is feeling lonely! 🛒💔 Start adding your favorites now! 😊"</h2>
+         <div id='CartUpperImg'>
+         <img src="/EmptyBasket.png" alt="" />
+         </div>
+          <div> <button onClick={goproduct}>Explore Product</button></div>
+         </div>
+         
         ) : (
-          <div>
+          <div id='Superclass'>
             {cartItems.map((item, index) => (
               <div id='MainCart' key={index} className="cart-item">
                 <div id="MainCart1">
@@ -81,24 +91,19 @@ function Cart() {
                 <div id="MainCart1-2">
                   <h2>{item.Item}</h2>
                   <p>{item.Name}</p>
-                  <p>${item.MRP}</p>
-
-                  {/* Quantity Counter */}
+                  <p style={{color:"green"}}>${item.MRP}</p>
                   <div id="quantity">
                     <button onClick={() => handleDecrement(index)}>-</button>
                     <span>{item.quantity}</span>
                     <button onClick={() => handleIncrement(index)}>+</button>
                   </div>
-
-                  {/* Price Update based on Quantity */}
-                  <p>Total: ${item.MRP * item.quantity}</p>
-
-                  <button onClick={() => handleDelete(index)}>Delete</button>
+                  <p style={{color:"green"}}>Total: ${item.MRP * item.quantity}</p>
+                  <button id='Delete' onClick={() => handleDelete(index)}>Remove Item</button>
                 </div>
               </div>
             ))}
-            {/* Total Price */}
             <div id="totalPrice">
+              <h1>Order Summary</h1>
               <h3>Total Price: ${calculateTotalPrice()}</h3>
               <button>Proceed to Check Out</button>
             </div>

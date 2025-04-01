@@ -55,7 +55,7 @@
     background-color: rgb(0,88,141);
 }
 #buttons button:hover{
-    box-shadow: 3px 2px 2px 2px rgb(177, 129, 129);
+    box-shadow: 3px 2px 2px 2px rgb(0, 0, 0);
     transition: all ease .2s;
      
 }

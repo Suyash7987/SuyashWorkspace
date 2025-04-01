@@ -1,37 +1,194 @@
+#Superclass{
+       display: flex;
+       flex-direction: column;
+       gap: 50px;
+       align-items: center;
+       justify-content: space-around ;
+}
 #CartMain
 {
-  height: 92vh;
+     height: 92vh;
   width: 100%;
-  background-color: aqua;
-  padding: 5rem;
+   padding: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+ }
 #CartUpper{
      width: 100%;
      text-align: center;
-     background-color: white;
-  
 }
-#MainCart{
-     background-color: yellow;
+#CartUpper1{
      display: flex;
+     flex-direction: column;
      align-items: center;
+     justify-content: space-between;
+     height: 70vh;
+}#CartUpperImg{
+   height: 30vh ;  
+}
+#CartUpperImg img{
+      height: 100%;
+      object-fit: cover;
+}
+#CartUpper1 button{
+     font-size: 1rem;
+     padding: 10px;
+     border-radius: 10px;
+     border: none;
+     font-weight: 100;
+     border: 1.5px solid rgb(202, 114, 253);
+     color: rgb(202, 114, 253);
+     margin-right: 5rem;
+}
+#CartUpper1 button:hover{
+     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+     background-color: rgb(236, 133, 245);
+     color: white;
+     cursor: pointer;
+     transition: all ease .2s;
+  }
+#MainCart{
+     background-color: rgb(255, 255, 255);
+     display: flex;
      
+     border-radius: 20px;
+     align-items: center;
+     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
 }
 #MainCart1{
     width: 20%;
-    background-color: pink;
 }
-
 #MainCart1 #img{
    width: 50%;
    object-fit: cover;
 }
+/* p{
+     font-size: 22px;
+} */
 #MainCart1-2{
      display: flex;
-     width: 50%;
+     width: 100%;
+     padding: 50px;
      align-items: center;
      justify-content: space-around;
+}
+#quantity{
+         display: flex;
+         gap: 20px;
+         font-size: 20px;
+         align-items: center;
+}
+#quantity button{
+     padding: 5px 15px;
+     font-size: 1.5rem;
+     margin: 0;
+     border: 1px solid black;
+     border-radius: 20px;
+     background-color: beige;
+ }
+#quantity button:hover{
+      scale: 1.1;
+      transition: all ease .2s;
+      background-color: black;
+      color: white;
+      cursor: pointer;
+}
+#Delete{
+     padding: 15px;
+     font-size: 1.1rem;
+     border: 1px solid rgb(255, 102, 0);
+     border-radius: 15px;
+     color: rgb(255, 102, 0);
+     background-color: white;
+}
+#Delete:hover{
+      cursor: pointer;
+      background-color: rgb(255, 102, 0);
+      color: white;
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+      transition: all ease .2s;
+}
+#totalPrice{
+     padding: 50px;
+     display: flex;
+     border-radius: 20px;
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+      flex-direction: column;
+     align-items: center;
+     gap: 20px;
+     background-color: rgb(247, 247, 247);
+}
+#totalPrice button{
+      padding: 10px;
+      font-size: 1.2rem;
+      border: 1px solid rgb(236, 133, 245);
+      color: rgb(236, 133, 245);
+      background-color: white;
+      border-radius: 15px;
+}
+#totalPrice button:hover{
+      cursor: pointer;
+      background-color: rgb(236, 133, 245);
+      color: white;
+      transition: all ease .2s;
+}
+@media(max-width:1024px){
+     #Delete{
+         padding: 11px;
+         margin: 0;
+
+     } 
+     #MainCart1-2{
+
+      display: flex;
+         width: 100%;
+         padding: 33px;
+         gap: 30px;
+         align-items: center;
+         justify-content: space-around;
+     }
+     #totalPrice Button{
+           padding: 11px;
+           width: 100%;
+     }
+}
+@media(max-width:768px){
+    #MainCart{
+      flex-direction: column;
+    }  
+    #MainCart1
+    {
+     padding: 20px;
+      width: 50%; 
+    }  
+    #MainCart1-2{
+      flex-direction: column;
+      gap: 20px;
+      
+    }
+    #CartUpper1 button{
+     width: 100%;
+  }  
+    #totalPrice button{
+     margin: 0;
+     width: auto;
+     font-size: 15px;
+    }
+
+}
+@media(max-width:480px)
+{
+   #CartUpper1 button{
+      width: 100%;
+   }  
+   #MainCart{
+     gap: 0;
+   }  
+   #MainCart1{
+     width: 100%;
+   }  
+   p{
+     font-size: 22px;
+   }
 }

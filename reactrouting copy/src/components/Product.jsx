@@ -15,37 +15,37 @@ export const data = [
   { img: "/Images/Fastrack.png", Item: "FasTrack", Name: "Aviator", MRP: "$499", caption: " Sunglasses for Men and Women" },
 ];
 
+
+export function handleNav(item, navigate) {
+    const userLogined = localStorage.getItem("userLogined");
+
+    if (userLogined !== "true") {
+      if (navigate) {
+        navigate('/Login');
+      } 
+    } else {
+        const price = item.MRP.replace('$', ''); // Remove the $ sign
+        const itemString = `${item.Item}|${item.Name}|${price}|${item.caption}|${item.img}`;
+
+        const cartItems = localStorage.getItem("cartItems") || '';
+        const updatedCartItems = cartItems ? `${cartItems},${itemString}` : itemString;
+
+        localStorage.setItem("cartItems", updatedCartItems);
+        if (navigate) {
+          navigate('/Cart');
+        }
+    }
+}
+
 function Product({ userLogined, setUserLogined }) {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
-  // Simulate loading state
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 500);
   }, []);
-
-  function handleNav(item) {
-    userLogined = localStorage.getItem("userLogined");
-    if (userLogined !== "true") {
-        navigate('/Login');
-    } else {
-        // Remove the "$" symbol from MRP and store it as a number
-        const price = item.MRP.replace('$', ''); // Remove the $ sign
-        const itemString = `${item.Item}|${item.Name}|${price}|${item.caption}|${item.img}`;
-
-        // Get existing cart items from localStorage and append the new item
-        const cartItems = localStorage.getItem("cartItems") || '';
-        const updatedCartItems = cartItems ? `${cartItems},${itemString}` : itemString;
-
-        // Save back to localStorage
-        localStorage.setItem("cartItems", updatedCartItems);
-
-        // navigate('/Cart');
-    }
-}
-
 
   function Loader() {
     return (
@@ -85,7 +85,7 @@ function Product({ userLogined, setUserLogined }) {
                   <p>{item.Name}</p>
                   <div id="itemslower">
                     <Link id="Link" to={`/View/${index}`}>View Details</Link>
-                    <button onClick={() => handleNav(item)}>Buy Now</button>
+                    <button onClick={() => handleNav(item, navigate)}>Buy Now</button>
                   </div>
                 </div>
               </div>

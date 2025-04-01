@@ -23,28 +23,35 @@ function Login({userLogined ,handleLoginSuccess ,setUserLogined}) {
   // Handle login using Firebase authentication
   async function handleLogin() {
     try {
-      if (UserName === "" || Password === "") {
+      if (!UserName === "" || !Password === "") {
         alert("Please Enter Email or Password");
         return;
       }
       const userCredential = await signInWithEmailAndPassword(auth, UserName, Password);
-      localStorage.setItem("userLogined", "true");
+      localStorage.setItem("userLogined", JSON.stringify(true));
       // handleLoginSuccess();
-      setUserLogined("true");
+      setUserLogined(true);
       console.log("UserLogined",userLogined)
-      reset(); 
+      
+      handleLoginSuccess();
+      navigate("/Profile");
       setUserName("")
       setPassword("")
       
-      navigate("/Profile");
+      reset(); 
     } catch (error) {
       alert("Invalid Email or Password");
     }
-    // handleLoginSuccess();
     // reset(); 
     // setUserName("")
     // setPassword("")
   }
+
+  const handleLogout = () => {
+    setUserLogined(false);
+    localStorage.removeItem("userLogined");
+};
+
 
   // Handle signup using Firebase authentication
   async function handleSubmitSignup() {
@@ -129,7 +136,7 @@ function Login({userLogined ,handleLoginSuccess ,setUserLogined}) {
 
               {isSignup && (
                 <div id="ConfirmPassword">
-                  <input
+                  <input style={{marginBottom:"20px"}}
                     {...register("ConfirmPassword", {
                       required: "*Confirm Password Required ",
                     })}

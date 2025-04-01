@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { data } from "./Product.jsx";
-import { Link, useParams } from "react-router-dom";
-
+import { Link, useParams,useNavigate } from "react-router-dom";
+import { handleNav } from "./Product.jsx";
 import './View.css';
 
 function View() {
   const { index } = useParams(); // Get the index from the URL
   const product = data[index];
+  const [Toggel, setToggel] = useState(true)
   const color = ["Black", "White", "Golden"];
-
+  const navigate =useNavigate();
   return (
     <>
       <div id="Viewmain">
@@ -65,9 +66,12 @@ function View() {
               </div>
            </div>
            <div id="Viewmain-right-Lower2">
-              <button>Add to Cart</button>
-              <button>Buy Now</button>
-              <button>Save</button>
+           { Toggel?(
+            <button onClick={() => {handleNav(product,navigate);setToggel(false)}}>Add to Cart</button>):
+            (<button onClick={() => navigate("/Cart")}>View Cart</button>)   
+            }
+              <button onClick={() => handleNav(product, navigate)}>Buy Now</button>
+              
            </div>
         </div>
       </div>      
