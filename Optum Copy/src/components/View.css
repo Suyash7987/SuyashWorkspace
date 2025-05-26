@@ -1,0 +1,395 @@
+#Viewmain{
+      width: 100vw;
+     padding: 3.125rem;
+     display: flex;
+     gap: 0.938rem;
+}
+#Viewmain-left
+{
+   height: 100%;
+   width: 50%;
+   background-color: rgb(240, 240, 226) ;
+   display: flex;
+   padding: 5rem;
+   border-radius: 1.25rem;
+   gap: 1.2rem;
+   align-items: center;
+   justify-content: space-around;   
+   flex-direction: column;
+}
+#Viewmain-left-upper
+{ 
+   height: 40vh;
+   width: 25vw;
+   background-color: rgb(255, 255, 255);          
+}
+#Viewmain-left-bottom
+{ 
+   height: 15vh;
+   width: 25vw;
+   padding: 1.25rem;
+   border-radius: 1.25rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   background-color: rgb(226, 225, 225);          
+}
+#Colorbox{
+    cursor: pointer;
+    height: 10vh;
+    width: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.938rem;
+    border-radius: 1.25rem;
+    background-color: aliceblue;
+}
+     #Colorbox input{
+    cursor: pointer;
+     height: 2.5rem;
+     width: 1.25rem;
+}
+#Viewmain-left-upper img{
+     height: 100%;
+     width: 100%;
+     object-fit: cover;
+}
+#Viewmain-right{
+    width: 50%;
+    border-radius: 1.25rem;
+    padding: 1.875rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.813rem;
+    background-color: rgb(33, 73, 73) ; 
+}
+#stars{
+      color:rgb(255, 255, 6);
+      font-size: 1.25rem;
+}
+#Viewman-right-upper{
+     width: 100%;
+     gap: 0.938rem;
+     display: flex;
+     padding: 1.25rem;
+     flex-direction: column;
+     border-radius: 1.25rem;
+     background-color: rgb(236, 221, 221);
+}
+#Viewman-right-upper h1,h2{
+     font-size: 2.188rem;
+}
+#Viewman-right-upper h4{
+     background-color: #606060;
+     color: white;
+     width: 35%;
+     font-weight: 100;
+     padding: 0.563rem 1.25rem;
+     border-radius: 1.25rem;
+}
+#Viewmain-right-Middle{
+     width: 100%;
+     padding: 1.25rem;
+     display: flex;
+     gap: 1.25rem;
+     border-radius: 1.25rem;
+     flex-direction: column;
+     background-color: rgb(236, 221, 221);
+}
+#Viewmain-right-Lower{
+    width: 100%;
+    padding: 3.125rem;
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    border-radius: 1.25rem;
+   justify-content: space-between;
+    background-color: #F4E1CE;
+}
+#Viewmain-right-Lower1{
+      height: 15.625rem;
+      border-radius: 1.25rem;
+      width: 15rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      background-color: rgb(255, 255, 255);
+}
+#Viewmain-right-Lower1 #eye{
+      font-size: 2.5rem;
+      color: white;
+      padding: 0.625rem;
+      border-radius: 0.625rem;
+      background-color: #355561;
+}
+#Viewmain-right-Lower1 #Link{
+     text-decoration: none;
+     color: #00588D;
+     font-size: 1.063rem;
+     font-weight: 540;
+}
+#Viewmain-right-Lower2{
+    width: 70%;
+    margin: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.25rem;
+    justify-content: space-between;
+}
+#Viewmain-right-Lower2 button{
+     padding: 0.625rem;
+     font-weight: 200;
+     border: none;
+     font-size: 1.25rem;
+     border-radius: 1.25rem;
+     background-color: coral;
+     color: beige;
+}
+#Viewmain-right-Lower2 button:hover{
+     scale: 1.04;
+     cursor: pointer;
+     background-color: black;
+     color:white;
+     transition: all ease.2s;
+}
+@media(max-width:1440px){
+      #Viewman-right-upper
+      {
+          gap: 0.438rem;
+      } 
+      #Viewman-right-upper h1,h2{
+         
+           font-size: 1.813rem;
+      }
+      #Viewman-right-upper h4{
+          padding: 0.563rem;
+          width: 21vw;
+      }
+      #Viewmain-right-Middle{
+          padding: 0.688rem;
+          gap: 0.625rem;
+      }
+      #Viewmain-right-Lower{
+           height: 26vh;
+      }
+      #Viewmain-right-Lower1{
+          height: 20vh;
+          text-align: center;
+          
+      }
+      #Viewmain-left{
+           padding: 2.188rem;
+      }
+      #Viewmain-left-bottom{
+           width: 25vw;
+      }
+      #Colorbox{
+          height: 8vh;
+          width: 5vw;
+      }
+}
+@media(max-width:1024px){
+     #Viewman-right-upper
+     {
+         gap: 0.438rem;
+     } 
+     #Viewman-right-upper h1,h2{
+        
+          font-size:1.5rem;
+     }
+     #Viewman-right-upper h4{
+          padding: 0.5rem 0.625rem;
+          width: 29vw;
+     }
+     .para{
+           font-size: .8rem;
+     }
+     #p {
+          font-size: 0.875rem;
+      }
+     #Viewmain-right-Middle{
+         padding: 0.688rem;
+         gap: 0.625rem;
+     }
+     #Viewmain-right-Lower{
+          padding: 3%;
+          width: 100%;
+     }
+     #Viewmain-right-Lower1{
+          padding: 0rem;
+          text-align: center;
+     }
+     #Viewmain-right-Lower1 #eye {
+          font-size: 0.938rem;
+     }
+     #Viewmain-right-Lower1 h3 {
+          font-size: 0.938rem;
+     }
+     #Viewmain-right-Lower2 {
+          width: 43vw;
+     }
+     #Viewmain-left{
+          padding: 2.188rem;
+          
+     }
+     #Viewmain-left-upper{
+     
+          height:25vh
+     }
+     #Viewmain-left img{
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+     }
+     #Viewmain-left-bottom{
+          width: 28vw;
+          padding: 0rem;
+     }
+     #Colorbox{
+         height: 8vh;
+         width: 8vw;
+     }
+}
+
+@media(max-width:768px){
+     #Viewmain{
+           flex-direction: column;
+     }
+     #Viewmain-right{
+ 
+         width: 85vw;
+     }
+     #Viewman-right-upper
+     {
+         gap: 0.5rem;
+     } 
+     #Viewman-right-upper h1,h2{
+        
+          font-size:1.563rem;
+     }
+     #Viewman-right-upper h4{
+          font-size: 0.938rem;
+          padding: 1.25rem;
+          width: 40vw;
+     }
+     #p {
+          font-size: 0.875rem;
+      }
+     #Viewmain-right-Middle{
+         padding: 15px;
+         gap: 0.625rem;
+     }
+     #Viewmain-right-Lower{
+          height: 18vh;
+          width: 77vw;
+          padding: 3%
+     }
+     #Viewmain-right-Lower1{
+          height: 15vh;
+          padding: 0rem;
+          text-align: center;
+     }
+     #Viewmain-right-Lower1 #eye {
+          font-size:1.25rem;
+     }
+     #Viewmain-right-Lower1 h3 {
+          font-size: 15px;
+     }
+     #Viewmain-right-Lower2 {
+          height: 15%;
+          width: 80vw;
+     }
+     #Viewmain-left-upper{
+            width: 50vw;
+     }
+     #Viewmain-left {
+          padding: 1.813rem;
+          width: 85vw;
+          gap: 1.25rem;
+      }
+     #Viewmain-left-bottom{
+          width:51vw;
+     }
+     #Colorbox{
+         height: 8vh;
+         width: 12vw;
+     }
+}
+@media(max-width:480px){
+     #Viewmain{
+           flex-direction: column;
+           align-items: center;
+     }
+     #Viewmain-right{
+         width: 85vw;
+     }
+     #Viewman-right-upper
+     {
+         gap: 0.188rem;
+     } 
+     #Viewman-right-upper h1,h2{
+        
+          font-size:1.563rem;
+     }
+     #Viewman-right-upper h4{
+          font-size: 0.938rem;
+          padding: 0.938rem;
+          width: 56vw;
+     }
+     #p {
+          font-size: 0.813rem;
+      }
+     #Viewmain-right-Middle{
+         padding: 0.938rem;
+         gap: 0.563rem;
+     }
+     #Viewmain-right-Lower{
+          height: 52vh;
+          flex-direction: column;
+          padding: 2%;
+          justify-content: center;
+     }
+     #Viewmain-right-Lower1{
+          height: 14vh;
+          padding: 0rem;
+          text-align: center;
+     }
+     #Viewmain-right-Lower1 #eye {
+          font-size: 1.25rem;
+     }
+     #Viewmain-right-Lower1 h3 {
+          font-size: 0.938rem;
+     }
+     #Viewmain-right-Lower2 {
+          height: 15%;
+          width: 80vw;
+     }
+     #Viewmain-right-Lower2 button {
+          width: auto;
+          font-size: 0.938rem;
+     }
+     #Viewmain-left-upper{
+            width: 75vw;
+     }
+     #Viewmain-left-upper img{
+          height: 35vh;
+          width: 75vw;
+   }
+     #Viewmain-left {
+          padding: 1.813rem;
+          width: 85vw;
+          gap: 1.25rem;
+      }
+     #Viewmain-left-bottom{
+          width:76vw;
+     }
+     #Colorbox{
+         width: 19vw;
+     }
+}

@@ -1,0 +1,250 @@
+#About {
+    padding: 0.625rem 18.75rem;
+    background-color: rgb(230, 243, 255);
+    /* background-color: rgba(0, 0, 0, 0.326); */
+}
+
+#AboutPart1 {
+
+    display: flex;
+    padding:0.625rem;
+    /* background-color: rgb(164, 35, 35); */
+}
+
+#Aboutpart1-left {
+    height: 100%;
+    width: 50%;
+    padding: 0rem 1.563rem;
+    /* background-color: yellowgreen; */
+}
+
+#Aboutpart1-left img {
+    height: 95%;
+    margin-left: 4.375rem;
+    width: 65%;
+    /* background-color: yellowgreen; */
+}
+
+#Aboutpart1-left img:hover {
+    scale: 1.2;
+    transition: all ease .2s;
+}
+
+#Aboutpart1-right {
+    height: 100%;
+    width: 60%;
+    padding: 2.813rem;
+    text-align: left;
+    color: beige;
+    border-radius: 2.5rem;
+    background-color: #355561;
+}
+
+#Aboutpart1-right p {
+    font-size: 1.375rem;
+}
+
+/*  */
+#AboutPart2 {
+    
+     padding:1.25rem;
+    display: flex;
+    color: beige;
+    /* background-color: rgb(164, 35, 35); */
+}
+
+#Aboutpart2-left {
+    height: 100%;
+    width: 50%;
+    padding:2.5rem;
+    
+    border-radius: 1.25rem;
+    background-color: #f1af6c;
+}
+
+#Aboutpart2-left h3 {
+    font-size: 1.375rem;
+    color: rgb(49, 38, 22);
+}
+#Aboutpart2-left h1{
+     font-size: 2.5rem;
+}
+
+#Aboutpart2-right img {
+    height: 95%;
+    margin-left: 4.375rem;
+    width: 65%;
+    /* background-color: yellowgreen; */
+}
+
+#Aboutpart2-right img:hover {
+    scale: 1.2;
+    transition: all ease .2s;
+}
+
+#Aboutpart2-right {
+    height: 100%;
+    width: 60%;
+    padding: 5.625rem 5rem;
+    text-align: left;
+    /* background-color: yellow; */
+}
+
+@media (max-width: 1440px) {
+    #About {
+        padding: 0.625rem 0rem;
+    }
+
+
+    #Aboutpart1-left,
+    #Aboutpart2-left {
+        width: 50%;
+       
+    }
+
+    #Aboutpart1-right,
+    #Aboutpart2-right {
+        width: 50%;
+        padding: 4.375rem;
+    }
+
+    #Aboutpart1-left img,
+    #Aboutpart2-right img {
+        width: 80%;
+      
+    }
+
+    #Aboutpart1-right h3,
+    #Aboutpart2-left h3 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    #About {
+        padding: 0.625rem 0rem;
+    }
+
+
+    #Aboutpart1-left,
+    #Aboutpart2-left {
+        width: 50%;
+        padding: 1.563rem 1.438rem;
+    }
+
+    #Aboutpart1-right,
+    #Aboutpart2-right {
+        width: 50%;
+        padding: 1.563rem 1.688rem;
+    }
+
+    #Aboutpart1-left img,
+    #Aboutpart2-right img {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #Aboutpart1-right h3,
+    #Aboutpart2-left h3 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #About {
+        padding: 0.625rem 3.125rem;
+    }
+
+    #AboutPart1 {
+        flex-direction: column;
+        height: auto;
+    }
+    #AboutPart2{
+     
+        flex-direction: column-reverse;
+    }
+    #Aboutpart1-left,
+    #Aboutpart2-left {
+        width: 100%;
+        padding: 1.25rem 0;
+    }
+
+    #Aboutpart1-right,
+    #Aboutpart2-right {
+        width: 100%;
+        padding:1.25rem;
+    }
+
+    #Aboutpart1-left img,
+    #Aboutpart2-right img {
+        width: 50%;
+        margin-left: 5.625rem;
+        /* margin-right: auto; */
+    }
+
+    #Aboutpart1-right p,
+    #Aboutpart2-left p {
+        font-size:1.125rem;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    #About {
+        padding:0.625rem 1.25rem;
+    }
+
+    #AboutPart1,
+    #AboutPart2 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #Aboutpart1-left,
+    #Aboutpart2-left {
+        width: 100%;
+        padding: 0.938rem 0rem;
+    }
+    #AboutPart2{
+        flex-direction: column-reverse;
+    }
+
+    #Aboutpart1-right h1 {
+        text-align: center;
+        font-size: 2.5rem
+    }
+
+    #Aboutpart1-right p {
+        text-align: center;
+        font-size: 0px;
+    }
+
+    #AboutPart1 #Aboutpart1-right,
+    p {
+        text-align: center;
+        font-size: -5px;
+    }
+
+    #Aboutpart1-right,
+    #Aboutpart2-right {
+        width: 100%;
+        padding:0.938rem;
+    }
+
+    #Aboutpart1-left img,
+    #Aboutpart2-right img {
+        width: 65%;
+        margin-left: 4.688rem
+
+    }
+
+    #Aboutpart2-left h3 {
+        text-align: center;
+    }
+
+    #Aboutpart2-left h1 {
+        text-align: center;
+    }
+
+}

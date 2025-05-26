@@ -1,0 +1,261 @@
+
+#ProMain {
+    height:81rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #headline {
+    height: 12.5rem;
+    width: 100%;
+    background-color: rgb(49, 82, 77);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  #headline i{
+     font-size: 3.125rem;
+     color: rgb(255, 255, 255);
+  
+  }
+  #headline h1{
+    font-size: 3.125rem;
+    font-family: cursive;
+    color: #ffc88a; 
+ }
+  #innerdiv {
+    height: 43.75rem;
+    width: 100%;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr)); 
+    gap: 3.75rem; 
+    padding: 1.25rem; 
+    position: relative;
+  }
+  
+  .items {
+    background-color: rgba(224, 200, 140, 0.725);
+    border-radius: 1.25rem; 
+    text-align: center;
+   
+    width: 21.25rem;
+  }
+  
+  #item-upper {
+    background-color:rgb(218, 212, 212);
+  
+    height: 18.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    border-radius:1.25rem;
+  }
+  #item-upper img{
+     height: 100%;
+     width: 100%;
+     object-fit: cover;
+  }
+  #item-lower {
+     width: 100%;
+    gap: 0.688rem;
+    display: flex
+;
+    margin-top: 0.625rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.625rem;
+  }
+  #itemslower
+  {
+    width: 100%;
+    display: flex;
+    gap: 0.625rem;
+    justify-content: center;
+    }
+  #itemslower-2
+  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: red;
+  }
+  #itemslower #Link{
+       text-decoration: none;
+       color: black;
+       padding: 0.938rem;
+       border-radius: 1.25rem;
+       background-color: white;  
+  }
+  #itemslower button  {
+    
+    cursor: pointer;
+    border-radius: 3.125rem;
+    border: none;
+    list-style: none;
+    font-size: 1.063rem;
+    width: 8.125rem;
+    
+}
+#item-lower #Link:hover{
+    background-color: black;
+    color: white;
+    transition: all ease .2s;
+}
+#item-lower button:hover{
+     background-color: black;
+     color: white;
+     transition: all ease .2s;
+}
+  #h1 {
+    font-size: 1.875rem;
+    
+  }
+
+  p {
+    font-size: 1.125rem;
+  }
+  @media (max-width: 1440px) {
+    #ProMain {
+        height:127vh; 
+    }
+    #headline {
+        font-size: 1.375rem;
+    }
+    #innerdiv {
+        grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
+        gap: 3.125rem;
+    }
+    .items {
+        height: 28.125rem;
+        width: 20rem; 
+    }
+    #item-upper {
+        height: 16.875rem;
+    }
+
+    #item-lower button {
+        padding: 0.875rem;
+        font-size: 1rem;
+    }
+
+    #h1 {
+        font-size: 1.75rem;
+    }
+
+    p {
+        font-size: 1.125rem;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    #ProMain {
+        height: 162vh; 
+    }
+
+    #headline #h1 {
+        font-size: 1.688rem;
+    }
+
+    #innerdiv {
+        grid-template-columns: repeat(auto-fill, minmax(15.625rem, 1fr)); 
+        gap: 2.5rem;
+    }
+
+    .items {
+        height: 28.125rem;
+        width: 17.5rem; 
+    }
+
+    #item-upper {
+        height: 15.625rem; 
+    }
+
+    #item-lower button {
+        padding: 0.75rem;
+        font-size: 1rem; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    #ProMain {
+        height: 174vh;
+    }
+
+    #headline {
+        height: 9.375rem;
+    }
+    #headline h1{
+        font-size: 1rem; 
+     }
+
+    #innerdiv {
+        gap: 1.875rem; 
+    }
+
+    .items {
+        height: 25rem; 
+        width: 100%; 
+    }
+
+    #item-upper {
+        height: 12.5rem;
+    }
+
+    #item-lower button {
+        padding: 0.625rem;
+        font-size: 0.875rem;
+    }
+
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    #ProMain {
+        height: 151vh;
+        padding: 0.625rem; 
+    }
+    #headline #h1{
+        font-size: 1.25rem;
+    }
+    #headline {
+        height: 8.125rem;
+        width: 95vw;
+    }
+
+    #innerdiv {
+        grid-template-columns: 1fr; 
+        gap: 1.25rem; 
+    }
+
+    .items {
+        height: 21.875rem;
+        width: 100%;  
+    }
+
+    #item-upper {
+        height: 11.25rem; 
+    }
+
+    #item-lower button {
+        padding: 0.5;
+        font-size: 0.75rem; 
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 0.875rem; 
+    }
+}

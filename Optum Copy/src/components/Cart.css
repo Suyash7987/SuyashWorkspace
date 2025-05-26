@@ -1,0 +1,198 @@
+#Superclass{
+       display: flex;
+       flex-direction: column;
+       gap: 3.125rem;
+       align-items: center;
+       justify-content: space-around ;
+}
+#CartMain
+{
+     height: 92vh;
+  width: 100%;
+   padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+#CartUpper{
+     width: 100%;
+     text-align: center;
+}
+#CartUpper1{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-between;
+     height: 70vh;
+}#CartUpperImg{
+   height: 30vh ;  
+}
+#CartUpperImg img{
+      height: 100%;
+      object-fit: cover;
+}
+#CartUpper1 button{
+     font-size: 1rem;
+     padding: 0.625rem;
+     border-radius: 0.625rem;
+     border: 1px solid rgb(236, 133, 245);
+     font-weight: 100;
+     border:0.094x solid rgb(202, 114, 253);
+     color: rgb(202, 114, 253);
+     margin-right: 5rem;
+}
+#CartUpper1 button:hover{
+     box-shadow: 0rem 3px 0.625rem rgba(0, 0, 0, 0.4);
+     background-color: rgb(236, 133, 245);
+     color: white;
+     cursor: pointer;
+     transition: all ease .2s;
+  }
+#MainCart{
+     background-color: rgb(255, 255, 255);
+     display: flex;
+     border-radius: 1.25rem;
+     width: 100%;
+     align-items: center;
+     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+}
+#MainCart1{
+    width: 20%;
+}
+#MainCart1 #img{
+   width: 50%;
+   object-fit: cover;
+}
+#MainCart1-2{
+     display: flex;
+     width: 100%;
+     padding: 3.125rem;
+     align-items: center;
+     justify-content: space-around;
+}
+#quantity{
+         display: flex;
+         gap: 1.25rem;
+         font-size: 1.25rem;
+         align-items: center;
+}
+#quantity button{
+     padding: 0.313rem 0.938rem;
+     font-size: 1.5rem;
+     margin: 0;
+     border: 1px solid black;
+     border-radius: 1.25rem;
+     background-color: beige;
+ }
+#quantity button:hover{
+      scale: 1.1;
+      transition: all ease .2s;
+      background-color: black;
+      color: white;
+      cursor: pointer;
+}
+#Delete{
+     padding: 0.938rem;
+     font-size: 1.1rem;
+     border: 1px solid rgb(255, 102, 0);
+     border-radius: 0.938rem;
+     color: rgb(255, 102, 0);
+     width: 100;
+     background-color: white;
+}
+#Delete:hover{
+      cursor: pointer;
+      background-color: rgb(255, 102, 0);
+      color: white;
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+      transition: all ease .2s;
+}
+#totalPrice{
+     padding: 3.125rem;
+     display: flex;
+     border-radius: 1.25rem;
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+      flex-direction: column;
+     align-items: center;
+     gap: 1.25rem;
+     background-color: rgb(247, 247, 247);
+}
+#totalPrice button{
+      padding:0.625rem;
+      font-size: 1.2rem;
+      border: 1px solid rgb(236, 133, 245);
+      color: rgb(236, 133, 245);
+      background-color: white;
+      border-radius: 15px;
+}
+#totalPrice button:hover{
+      cursor: pointer;
+      background-color: rgb(236, 133, 245);
+      color: white;
+      transition: all ease .2s;
+}
+@media(max-width:1024px){
+     #Delete{
+         padding:0.688rem;
+         margin: 0;
+
+     } 
+     #MainCart1-2{
+
+      display: flex;
+         width: 100%;
+         padding: 2.063rem;
+         gap: 1.875rem;
+         align-items: center;
+         justify-content: space-around;
+     }
+     #totalPrice Button{
+           padding: 0.688rem;
+           width: 100%;
+     }
+}
+@media(max-width:768px){
+    #MainCart{
+      flex-direction: column;
+    }  
+    #MainCart1
+    {
+     padding: 1.25rem;
+      width: 50%; 
+    }  
+    #MainCart1-2{
+      flex-direction: column;
+      gap:1.25rem;
+      
+    }
+    #CartUpper1 button{
+     width: 100%;
+  }  
+    #totalPrice button{
+     margin: 0;
+     width: auto;
+     font-size: 0.938rem;
+    }
+
+}
+@media(max-width:480px)
+{
+     #totalPrice button{
+           width: 11rem;
+     }
+     #Delete{
+           width: 100%;
+     }
+   #CartUpper1 button{
+      width: 100%;
+   }  
+   #MainCart{
+     gap: 0;
+   }  
+   #MainCart1{
+     width: 100%;
+   }  
+   p{
+     font-size: 1.375rem;
+   }
+}

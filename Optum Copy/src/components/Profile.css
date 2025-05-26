@@ -1,0 +1,125 @@
+#Profile{
+     height: 92vh;
+     width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 0rem;
+      gap: 2rem;
+      /* background-color: aqua; */
+}
+#div1{
+      height: 100%;
+      width: 38%;
+      background-color: rgb(230, 241, 241);
+      border-radius: 1.2rem;
+      box-shadow: 0px 1px 4px 5px solid black;
+}
+#div1-1{
+      height: 25%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0.80rem;
+      gap: 15px ;
+      /* background-color: red; */
+}
+#circle{
+      height: 100%;
+      width: 20%;
+      border-radius: 50%;
+}
+#div2{ 
+     width: 100%;
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 20px;
+     /* background-color: rgb(29, 175, 175); */
+}
+.profiles
+{
+      display: flex;
+      flex-direction: column;
+}
+.profiles input{
+      outline: none;
+      border: none;
+      background-color: transparent;
+      border-bottom: 1px solid black;
+      font-size: 1rem;
+      padding: 0.8rem;
+      
+      width: 18rem
+}
+#btnsection{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+}
+#btnsection button{ 
+     padding: 0.938rem;
+     font-size: 1.25rem;
+     border-radius: 1.25rem;
+     background-color: white;
+     border: 0.094rem solid rgb(247, 114, 247) ;
+     color:rgb(247, 114, 247);
+     cursor: pointer;
+}
+#btnsection #Save{
+      background-color: green;
+      border: none;
+      color: white;
+}
+#btnsection #Update{
+     background-color: orange;
+     border: none;
+     color: white;
+}
+#btnsection #Logout{
+     background-color: crimson;
+     border: none;
+     color: white;
+}
+@media (max-width: 1024px) {
+      #div1 {
+        width: 60%;
+      }
+    
+      .profiles input {
+        width: 16rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      #div1 {
+        width: 80%;
+      }
+    
+      .profiles input {
+        width: 14rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      #div1 {
+        width: 95%;
+      }
+    
+      .profiles input {
+        width: 100%;
+      }
+    
+      #btnsection {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      #btnsection button {
+        width: 100%;
+        max-width: 90%;
+      }
+    }

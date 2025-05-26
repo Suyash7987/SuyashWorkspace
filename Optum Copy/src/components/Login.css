@@ -1,0 +1,279 @@
+#Loginpage{
+    background-color: rgb(230, 243, 255); 
+    padding:3.125rem 16.256rem;
+    display: flex;
+    justify-content: center;
+}
+#Login{
+    width: 53.125rem;
+    border-radius: 1.25rem;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    
+}
+#Login1,#Login2{
+    display: flex;
+    flex-direction: column;
+     text-align: left;
+     margin-bottom: 0.938rem;
+}
+#ConfirmPassword p{
+    font-size: 0.875rem;
+    color: red;
+}
+#Login1 p,#Login2 p{
+    font-size: 0.875rem;
+    color:red
+}
+#Login-Left{
+    width: 55%;
+    background-color: #0E484C;
+}
+#Login-Left-Upper{
+     padding:1.25rem;
+     color: white;
+     font-size: 2rem;
+}
+#Login-Left-Lower span{
+     font-family:serif;
+     color: rgb(255, 121, 26);
+}
+#Login-Left-Lower
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    padding:3.75rem 0.563;
+    font-size: 1.3rem ;
+    color: rgb(177, 247, 247);
+}
+#Login-Left-Lower p{
+    font-family:'Times New Roman', Times, serif;
+    color:coral;
+}
+#Login-Right{
+     width: 50%;
+    padding:1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+    #Login-Right h1{
+    margin-bottom: 0.875rem;
+    font-weight: 540;
+}
+#Login-Right h4{
+   margin-bottom: 2.5rem;
+   color: rgb(100, 92, 92);
+   font-weight: 520;
+}
+#Login-Right form{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     
+}
+ #Login-Right form input {
+   width:100%;
+   padding:0.625rem;
+   margin-bottom: 0rem;
+   border: 0.094rem solid rgba(0, 0, 0, 0.282);
+   border-radius: 0.313rem;
+   font-size:0.875rem;
+   font-weight: 500;
+   background: rgba(255, 255, 255, 0.786);
+   color: rgb(0, 0, 0);
+   outline: none;
+ }
+ 
+ input[type="text"]::placeholder,
+ input[type="password"]::placeholder {
+   color: rgba(0, 0, 0, 0.7);
+ }
+
+#Login-right a{
+    width: 58%;
+    padding: 0rem;
+ }
+ #Login-Right form a{
+    padding: 0.75rem;
+    font-size: 1.063rem;
+    margin-top: 0.313rem;
+    cursor: pointer;
+    transition: 0.3s;
+ }
+ #Login-Right form button{ 
+   width: 41%;
+   padding:0.75rem;
+   background: #ffffff;
+   color: rgb(202, 114, 253);
+   font-size: 1.125rem;
+   border:0.094rem solid rgb(202, 114, 253);
+   margin-top: 1.300rem;
+   border-radius: 0.313rem;
+   cursor: pointer;
+   transition: 0.3s;
+ }
+ #Login-Right form button:hover{
+   box-shadow: 0rem 0.188rem 0.625rem rgba(0, 0, 0, 0.4);
+   background-color: rgb(202, 114, 253);
+   color:white;
+  }
+ 
+ @media (max-width: 1200px) {
+    #Loginpage {
+        padding:3.125rem 9.375rem;
+    }
+    #Login {
+        width:43.75rem;
+        
+    }
+    #upperlogin {
+        padding: 9.375rem 1.875rem;
+    }
+    #upperlogin h1 {
+        font-size: 2.5rem;
+    }
+    #Login-Left img {
+        border-radius: 0.938rem;
+    }
+    #Login-Right form input {
+        width: 90%;
+        margin-left: 0rem;
+    }
+    #Login-Right form input[type="submit"],button {
+        width: 60%;
+        margin-left: 1.25rem;
+    }
+    #Login-Right form  button{
+           margin-left: 0rem ;
+    }
+}
+
+@media (max-width: 992px) {
+    #Loginpage {
+        padding: 3.125rem 6.5rem;
+    }
+    #Login {
+        width:37.5rem;
+        height: 21.875rem;
+    }
+    #upperlogin {
+        padding:7.5rem 1.25rem;
+    }
+    #upperlogin h1 {
+        font-size:2.188rem;
+    }
+    #Login-Left img {
+        border-radius:0.625rem;
+    }
+    #Login-Right {
+        padding: 0.938rem;
+    }
+    #Login-Right form input {
+        width: 55%;
+    }
+    #Login-Right form input[type="submit"] ,button{
+        width: 55%;
+    }
+}
+
+@media(max-width: 768px) {
+    #Loginpage {
+        padding: 3.125rem 1.875rem;
+      
+    }
+    #Login {
+        width: 100%;
+        height: 40%;
+        flex-direction: column;
+        gap: 0.625rem;
+    }
+    #upperlogin {
+        padding: 5rem 1.25rem;
+        width: 100%;
+        text-align: center;
+    }
+    #upperlogin h1 {
+        font-size: 1.875rem;
+    }
+    #Login-Left {
+        width: 100%;
+    }
+    #Login-Left img {
+        width: 100%;
+        border-radius:0.625rem;
+    }
+    #Login-Right form{
+         align-items: center;
+         gap: 0.063rem;
+    }
+    #Login-Right {
+        width: 70%;
+        padding:1.563rem;
+        text-align: center;
+        margin-left: 6.25rem;
+        background-color: white;
+    }
+    #Login-Right p{
+         left: 10.938rem;
+    }
+    #Login-Right form input {
+        width: 100%;
+    }
+    #Login-Right form button{
+         margin-top: 0rem;
+         width: 30%;
+    }
+}
+
+@media (max-width: 480px) {
+    #Loginpage {
+        padding:3.125rem 1.875rem;
+        height: 60%;
+        
+    }
+    #Login {
+        width: 100%;
+        height: 60%;
+        flex-direction: column;
+    }
+    #upperlogin {
+        padding: 5rem 1.25rem;
+        width: 100%;
+        height: 50%;
+        text-align: center;
+    }
+    #upperlogin h1 {
+        font-size:1.875rem;
+    }
+    #Login-Left {
+        width: 100%;
+        height: 50%;
+    }
+    #Login-Left img {
+        width: 100%;
+        height: 12.5rem;
+        border-radius: 0.625rem;
+    }
+    #Login-Right {
+        width: 100%;
+        height: 31.25rem;
+        padding:  3.75rem 1.25rem;
+        text-align: center;
+        margin-left: 0rem;
+    }
+    #Login-Right p{
+         left:0.625rem;
+             
+    }
+    #Login-Right form button{
+        margin-top: 0rem;
+        width: 30%;
+   }
+    #Login-Right form input {
+        width: 100%;
+        
+    }
+    
+}
