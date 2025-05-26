@@ -1,5 +1,4 @@
-// Focuses on Routes and Middleware
-//Import Packages 
+// Defining  Routes and Middleware
 const express = require('express');
 const morgan = require('morgan');
 const moviesRouter = require('./Routes/moviesRoutes');
@@ -7,10 +6,10 @@ const userRoute =require('./Routes/userRoute')
 const authRouter = require('./Routes/authRouter')
 let app = express();
 
-const logger = function(req, res, next){
-    console.log('Custom middleware called');
-    next();
-}
+// const logger = function(req, res, next){
+//     console.log('Custom middleware called');
+//     next();
+// }
 
 app.use(express.json());
 

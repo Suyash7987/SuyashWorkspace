@@ -6,12 +6,7 @@ const util =require('util')
 const crypto=require('crypto')
 const sendEmail=require('./../Utils/email')
 
-const options={
-  expires:process.env.LOGIN_EXPIRES,
-       httpOnly:true
-}
-
-//Signs a JWT using user ID, a secret string, and expiration.
+// Signs a JWT using user ID, a secret string, and expiration.
 
 const signToken =id=>{
   return jwt.sign({id},process.env.SECRET_STR,{
@@ -21,13 +16,14 @@ const signToken =id=>{
 
 exports.signup= asyncErrorHandler(async (req,res,next)=>{
      const newUser=await User.create(req.body)
-     const token = signToken(newUser._id) // generate Jwt T3
-     const cookieExpireDays = parseInt(process.env.LOGIN_EXPIRES) || 90;
+     const token = signToken(newUser._id) // generate Jwt Token
+     const cookieExpireDays = parseInt(process.env.LOGIN_EXPIRES);
 
 res.cookie('jwt', token, {
   expires: new Date(Date.now() + cookieExpireDays * 24 * 60 * 60 * 1000),
-  httpOnly: true
+  httpOnly: true 
 });
+   
      res.status(201).json({
          status:"Success",
          token,
@@ -35,7 +31,7 @@ res.cookie('jwt', token, {
              user:newUser
          }
      })
-     
+     next();
 });
 
 exports.login=asyncErrorHandler(async(req,res,next)=>{
@@ -50,7 +46,6 @@ exports.login=asyncErrorHandler(async(req,res,next)=>{
    }
    // Check whether the User is exist or not
    const user=await User.findOne({email:email}).select('+password')
-//   const isMatch =await user.comparepasswordindb(password,user.password)
 
   //Check if the user exists & password matches 
   if(!user||!(await user.comparepasswordindb(password))){
@@ -68,7 +63,18 @@ res.cookie('jwt', token, {
         token,
         user
    })
-})
+});
+
+exports.logout = asyncErrorHandler((req, res) => {
+  res.cookie("jwt", "", {
+    expires: new Date(Date.now() + 10 * 1000), // expires in 10 seconds
+    httpOnly: true,
+  });
+  res.status(200).json({
+    status: "Success",
+    message: "Logged out successfully",
+  });
+});
 exports.protect=asyncErrorHandler(async(req,res,next)=>{
      //1. Read the token and check if it exist or not
        const testToken = req.headers.authorization;
@@ -77,29 +83,30 @@ exports.protect=asyncErrorHandler(async(req,res,next)=>{
         token =  testToken.split(' ')[1];
        }
        if(!token){
-         next(new CustomError('You are not Logged in'))
+         return next(new CustomError('You are not Logged in..!! Please Login to Continue '))
        }
-
      //2. Validate the token
+   let decodedtoken;
+  try {
+    decodedtoken = await util.promisify(jwt.verify)(token, process.env.SECRET_STR);
 
-    const decodedtoken= await util.promisify(jwt.verify)(token,process.env.SECRET_STR)
-     console.log(decodedtoken) 
-
-    //3.If the user exists in the Database or not 
+  } catch (err) {
+    //check for JWT expiration and provide a custom message
+    if (err.name === 'TokenExpiredError') {
+      return next(new CustomError('Your login session has expired. Please log in again.', 401));
+    } else if (err.name === 'JsonWebTokenError') {
+      return next(new CustomError('Invalid token. Please log in again.', 401));
+    } else {
+      return next(err); // Other unexpected JWT errors
+    }
+  }
+    // 3.If the user exists in the Database or not 
    const user = await User.findById(decodedtoken.id)
    if(!user){
      const error =new CustomError('The user with the given token does not exist')
      next(error);
-
     }
-    const isPasswordChanged=await user.ispasswordchanged(decodedtoken.iat)
-     //4. If the user changed password after the token was issued
-      if(isPasswordChanged){
-        const error =new CustomError('The Password has been changed recently please Login Again',401)  
-        return next(error)
-      }
-
-    //5. Allow the user to access route
+    //4. Allow the user to access route
     req.user=user
     next();
 })
@@ -109,7 +116,6 @@ exports.restrict=(role)=>{
          if(req.user.role!==role){
           const error =new CustomError('You do not have permission to perform this action',403)
           next(error)
-
          }
          next();
      }
@@ -122,8 +128,8 @@ exports.forgotPassword = asyncErrorHandler(async (req, res, next) => {
   await user.save({ validateBeforeSave: false });
 
   const resetUrl = `${req.protocol}://${req.get('host')}/api/v1/users/resetPassword/${resetToken}`;
-  const message = `We have received a Password Reset request.\nUse the link below to reset your password:\n\n${resetUrl}\n\nThis link is valid for 10 minutes.`;
-console.log('user',user)
+  const message = `We have received a Password Reset request.\nUse the link below to reset your password:\n\n${resetUrl}\n\n`;
+// console.log('user',user)
   try {
     await sendEmail({
       email: user.email,
@@ -142,7 +148,6 @@ console.log('user',user)
     return next(new CustomError('Failed to send reset email. Try again later.', 500));
   }
 });
-
 
 exports.resetPassword = asyncErrorHandler(async (req, res, next) => {
   // 1. Hash the incoming token

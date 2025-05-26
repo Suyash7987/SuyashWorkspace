@@ -1,7 +1,13 @@
 const CustomError = require('../Utils/CustomError');
 const User =require('./../Models/userModel');
 const asyncErrorHandler = require('./../Utils/asyncErrorHandler');
+const jwt = require('jsonwebtoken');
 
+const signToken =id=>{
+  return jwt.sign({id},process.env.SECRET_STR,{
+        expiresIn:process.env.LOGIN_EXPIRES
+    } )
+}
 exports. getAllUsers=asyncErrorHandler(async(req,res,next)=>{
      const users=await User.find()
      res.status(200).json({
@@ -12,7 +18,6 @@ exports. getAllUsers=asyncErrorHandler(async(req,res,next)=>{
          }
      })
 })
-
 const filterReqObj =(obj,...allowedFields)=>{
          const newObj ={};
          Object.keys(obj).forEach(prop=>{
@@ -23,16 +28,19 @@ const filterReqObj =(obj,...allowedFields)=>{
 }
 exports.updatePassword =asyncErrorHandler(async(req,res,next)=>{
       //1. Get current USer Data from Database
+      const {email, currentPassword, password, confirmPassword} = req.body;
+ 
       const user =await User.findById(req.user._id).select('+password')
-
+     
       //2. Check whether the Current password is correct or not
-      if(!(await user.comparepasswordindb(req.body.currentPassword,user.password))){
+      if(!(await user.comparepasswordindb(req.body.currentPassword))){
          return next(new CustomError('The Current Password Provided is Wrong',401))
       }
       //3. If Supplied password is Correct than Update the Password
-      user.password =req.body.password
+      user.password = req.body.password
       user.confirmPassword =req.body.confirmPassword;
       await user.save()
+     
       //4. Login User and Send JWT
        const token =signToken(user._id);
        res.status(200).json({
@@ -42,8 +50,7 @@ exports.updatePassword =asyncErrorHandler(async(req,res,next)=>{
              user
           }
        })
-    })
-
+})
 exports.updateMe =asyncErrorHandler(async(req,res,next)=>{
     //1.Check if the body contain password and confirm password
     if(req.body.password||req.body.confirmPassword){
@@ -52,8 +59,8 @@ exports.updateMe =asyncErrorHandler(async(req,res,next)=>{
 
     //Update User detail
      const filterObj =filterReqObj(req.body,'name','email',);
-    const updatedUser =await User.findByIdAndUpdate(req.user.id,filterObj,{runValidators:true,new:true});
-    res.status(200).json({
+     const updatedUser =await User.findByIdAndUpdate(req.user.id,filterObj,{runValidators:true,new:true});
+     res.status(200).json({
         status:'success',
         data:updatedUser
     })

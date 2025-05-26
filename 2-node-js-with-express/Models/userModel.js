@@ -52,35 +52,28 @@ const userSchema = new mongoose.Schema({
 // Hash password before saving
 userSchema.pre('save', async function (next) {
   if (!this.isModified('password')) return next();
-
   this.password = await bcrypt.hash(this.password, 12);
   this.confirmPassword = undefined;
   next();
 });
+
+//Used for soft delete and deactivation
 userSchema.pre(/^find/,function(next){
    this.find({
      active:{$ne:false}
    })
    next();
 })
+
 // Compare password method
 userSchema.methods.comparepasswordindb = async function (candidatePassword) {
   return await bcrypt.compare(candidatePassword, this.password);
 };
 
-// Check if password was changed after token was issued
-userSchema.methods.ispasswordchanged = function (JWTtimestamp) {
-  if (this.passwordchangedat) {
-    const pswchangedtimestamp = parseInt(this.passwordchangedat.getTime() / 1000, 10);
-    return JWTtimestamp < pswchangedtimestamp;
-  }
-  return false;
-};
-
 // Generate reset password token
 userSchema.methods.createResetPasswordToken = function(){
   const resettoken = crypto.randomBytes(32).toString('hex');
-
+  
   this.passwordResetToken = crypto.createHash('sha256').update(resettoken).digest('hex');
   this.passwordResetTokenExpires = Date.now() + 10 * 60 * 1000; // 10 mins
   console.log(resettoken,this.passwordResetToken)
@@ -89,3 +82,4 @@ userSchema.methods.createResetPasswordToken = function(){
 
 const User = mongoose.model('User', userSchema);
 module.exports = User;
+

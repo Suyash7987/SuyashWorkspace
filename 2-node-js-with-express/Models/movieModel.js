@@ -47,20 +47,6 @@ const movieSchema = new mongoose.Schema(
     genre: {
       type: [String],
       required: [true, "Genre is Required"],
-    //   enum: {
-    //     value: [
-    //       "Action",
-    //       "Sci-fi",
-    //       "Adventure",
-    //       "Thriller",
-    //       "Crime",
-    //       "Drama",
-    //       "Comedy",
-    //       "Romance",
-    //       "Biography",
-    //     ],
-    //     message: "This Genre movie is not available",
-    //   },
     },
     directors: {
       type: [String],
@@ -90,21 +76,20 @@ movieSchema.virtual("durationInHours").get(function () {
 });
 //Executed when the Document is Saved in DB
 //.save() or .create()
-movieSchema.pre("save", function (next) {
-  this.createdBy = "SUYASHSONI";
+// movieSchema.pre("save", function (next) {
+//   this.createdBy = "SUYASHSONI";
+//   next();
+// });
+// movieSchema.post("save", function (doc, next) {
+//   const content = `A new Movie Doc with name ${doc.name} has been created by ${doc.createdBy}\n`;
 
-  next();
-});
-movieSchema.post("save", function (doc, next) {
-  const content = `A new Movie Doc with name ${doc.name} has been created by ${doc.createdBy}\n`;
+//   fs.writeFileSync("./Log/Log.txt", content, { flag: "a" }, (err) => {
+//     console.log(err.message);
+//   });
+//   next();
+// });
 
-  fs.writeFileSync("./Log/Log.txt", content, { flag: "a" }, (err) => {
-    console.log(err.message);
-  });
-  next();
-});
 movieSchema.pre("find", function (next) {
-  //  this.find({ releasedate: { $lte: Date.now() } })
   this.find({ releasedate: { $lte: Date.now() } });
   next();
 });

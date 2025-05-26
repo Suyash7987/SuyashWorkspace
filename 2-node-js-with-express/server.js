@@ -5,9 +5,6 @@ const mongoose =require('mongoose')
 const app = require('./app');
 
 dotenv.config({path: './config.env'});//Loads the Variable from Config.env file
-
-
-
 //For connecting MongoDb
 mongoose.connect(process.env.CONN_STR,{
     useNewURLParser:true // tells Mongoose to use the new MongoDB connection string parser
