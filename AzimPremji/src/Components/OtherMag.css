@@ -1,0 +1,22 @@
+#OtherMagimg{
+     height: 100%;
+     width: 100%;
+}
+#OtherMagtitle{
+     letter-spacing: 3px;
+     font-size: 1.5rem ;
+     font-weight: 600;
+}
+#OtherMagtitle0{
+    font-size: 2rem ;
+    font-weight: 480;
+}
+#OtherMagtitle2{
+    font-size: 30px;
+}
+
+#OtherMagtitle1{
+    color: #21272A;
+    font-size: 1rem;
+    font-weight: 400;
+}

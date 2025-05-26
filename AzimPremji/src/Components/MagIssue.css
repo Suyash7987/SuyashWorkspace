@@ -1,0 +1,33 @@
+#MagImg{
+     height: 100%;
+     width: 100%;
+}
+#Magtitle1{
+     font-size: 1.5rem;
+     font-weight: 600;
+}
+#Magtitle2{
+    font-size: 1.063rem;
+    font-weight: 600;
+}
+#Magbutton{
+    background-color: #1F4D7C;
+    color:white;
+    padding: 12px 24px;
+    margin-bottom: 5rem;
+}
+#Maglinetop{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+#MagContainer{
+     margin-top: 10rem;
+}
+#Maglinetopsmall{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}

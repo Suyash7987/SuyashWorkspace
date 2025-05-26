@@ -1,0 +1,212 @@
+.container-fluid{
+    background-color: #1F4D7C;
+   height: auto;
+    width: 100%;
+    padding-top: 32px;
+    padding-bottom: 1.25rem;
+    position: relative;
+    
+}
+#topimg1{
+     position: absolute;
+     overflow: hidden;
+     top: 0%;
+     left: 6%;
+}
+#topimg2{
+     position: absolute;
+     top: 65%;
+     left: 12%;
+}
+#topimg3{
+    position: absolute;
+    top: 65%;
+    left: 5.5%;
+}
+#topimg4{
+     position: absolute;
+     top: 0;
+     left: 75%;
+}
+#line{
+width: 1168px;
+height: 2.5px;
+margin-top: 20px;
+
+}
+.row img{
+    height: 4.094rem; 
+    width: 8.404rem;
+}
+.row #Logohead{
+     height: 4.091rem;
+     width: 26.8rem;
+}
+#mainrow{
+     margin-top: 1.25rem;
+     height: 20px;
+     gap: 73px;
+     display: flex;
+}
+#row1{
+  height: 5vh;
+    display: flex;
+}
+#row1 i{
+    display: none;
+}
+#row1 ul{
+     display: flex;
+     list-style: none;
+     color: white;
+     gap: 3rem;
+}
+#row2{
+     width: 50%;
+     height: 25px;
+     display: flex;
+     align-items: center;
+     gap: 20px;
+     color: white;     
+}
+#row2 #searchimg{
+      height: 40px;
+}
+#row2 button{
+     border: none;
+     color: white;
+     border-radius: 1.25rem;
+     background-color: rgba(255, 255, 255, 0.103);
+}
+#dropdown{
+     width: 200px;
+     display: flex;
+     position: absolute;
+     gap: 20px;
+     font-weight: 600;
+     padding: 1.25rem;
+     margin-top: 20px;
+     flex-direction: column;
+     color:black;
+     background-color: #fff;
+     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.452);
+     border-radius: 20px;
+     z-index: 999;
+}
+
+#dropdown2{
+    width: 200px;
+    font-weight: 600;
+    display: flex;
+    border-radius: 10px;
+    gap: 35px;
+    padding: 1rem;
+    position: absolute;
+    margin-top: 20px;
+    flex-direction: column;
+    color:black;
+    z-index: 999;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.452);
+}#dropdown3 {
+    width: 120px;
+    height: 120px;
+    font-weight: 600;
+    border-radius: 10px;
+    position: absolute;
+    margin-top: 20px;
+    color: black;
+    background-color: #fff;
+    z-index: 999;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.452);
+}
+
+#dropdown3 ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 1rem;
+    list-style: none;
+    font-size: 18px;
+    margin: 0;
+}
+/* For tablets and below */
+@media (max-width: 768px) {
+    #mainrow {
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    #topimg1,#topimg2,#topimg3,#topimg4{
+        display: none;
+   }
+    #row1 ul {
+      flex-direction: column;
+      gap: 1rem;
+      background-color: #1F4D7C;
+      padding-left: 0;
+    }
+  
+    #row2 {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+  
+    #row2 button, #row2 p, #row2 img {
+      width: 100%;
+    }
+  
+    #line {
+      width: 100%;
+    }
+  }
+  
+  /* For mobile screens */
+  @media (max-width: 480px) {
+    .container-fluid {
+      height: auto;
+      padding: 1rem;
+    }
+    #topimg1,#topimg2,#topimg3,#topimg4{
+         display: none;
+    }
+    #row2{
+        display: contents;
+    }
+    #mainrow{
+         display: flex;
+         justify-content: space-between;
+    }
+    #dropdown, #dropdown2, #dropdown3 {
+      position: relative;
+      width: 100%;
+    }
+    .row img{
+        height: 2.094rem;
+        width: 6.404rem;
+    }
+    #row1 ul, 
+    #row2 button {
+      display: none;
+    }
+     .row #Logohead{
+         height: 2.091rem;
+         width :15.8rem;
+     }
+     #row1 i{
+         display: initial;
+         font-size: 20px;
+         color:whitesmoke
+     }
+     #row2 #searchimg,li{
+         display: flex;
+     }
+     #row2 #searchimg{
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        left: 65%;
+        top: 87px;
+     }
+  }
+  

@@ -1,0 +1,33 @@
+.container-fluid{
+     height: 100%;
+}
+#ResourceSpan{
+     background-color: #F4CAB4;
+     color: #645043;
+     padding: 0.5rem;
+     letter-spacing: 1px;
+}
+#resourcebtn{
+     padding: 12px 24px;
+     background-color:#1F4D7C ;
+     font-size: 14px ;
+     letter-spacing: 1px;
+     margin-bottom: 7rem;
+}
+#resourceleft1 h6{
+     font-weight: 600;
+     font-size: 20px;
+
+}
+#resourceleft1 small{
+    font-weight:550;
+    font-size: 14px;
+     font-style: italic;
+}
+#Linebottom{
+      margin-top: 2.25rem;
+      left: 0;
+      top: 92%;
+      position: absolute;
+      width: 100%;
+}

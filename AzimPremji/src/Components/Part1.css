@@ -1,0 +1,43 @@
+#part1container{
+     background-color: transparent;
+}
+#container1{
+    margin-top: 80px;
+    display: flex;
+}
+#row-2-1{
+     background-color: pink;
+     flex-direction: column;
+}
+#row-2-2{
+    background-color: rgb(212, 73, 97);
+    flex-direction: column;
+}
+#Img1,#Img2,#Img3,#Img4{
+     height: 100%;
+     width: 100%;
+}
+#Editor{
+     text-align: center;
+}
+#Editor a{
+     color:black;
+     letter-spacing: 5px;
+     font-size: 15px;
+     font-weight: 450;
+}
+#AnounceSpan{
+     /* background-color: #FDE9DB; */
+     text-align: right;
+     margin-top: -17px;
+     color: #BE7143;
+     font-weight: 600;
+     font-size: 13px;
+     letter-spacing: 2px;
+}
+#resourcebtn{
+    padding: 12px 24px;
+    background-color:#1F4D7C ;
+    font-size: 14px ;
+    letter-spacing: 1px;
+}
