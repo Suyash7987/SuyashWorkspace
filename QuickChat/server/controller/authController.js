@@ -1,70 +1,78 @@
-const express =require('express')
-const router =express.Router()
-const User =require('./../models/user')
-const bcrypt =require('bcryptjs')
-const jwt =require('jsonwebtoken')
+const router = require('express').Router();
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const User = require('./../models/user')
 
-router.post('/signup',async(req,res)=>{
-   try{
-      //1. if the User already exist
-      const user= await User.findOne({email:req.body.email})
-      //2. if exist send the error message  
-      if(user){
-          return res.send({
-              message:"user already exist"
-           })
-      }
-      //3. encrypt the password 
-      const hashedPassword= await bcrypt.hash(req.body.password,10)
-      req.body.password =hashedPassword
-      //4.Create new user and save it in database
-         const newUser=new User(req.body)
-         await newUser.save(); 
-          res.send({
-              message :"User created successfully",
-              success:true
+router.post('/signup', async (req, res) => {
+    try{
+        //1. If the user already exists
+        const user = await User.findOne({email: req.body.email});
 
-          })
-      }
-   catch(error){
-     res.send({
-         message:error.message,
-         status:false
-     })
-   }
+        //2. if user exists, send an error response
+        if(user){
+            return res.send({
+                message: 'User already exists.',
+                success: false
+            })
+        }       
+
+        //3. encrypt the password
+        const hashedPassword = await bcrypt.hash(req.body.password, 10);
+        req.body.password = hashedPassword;
+
+        //4. Create new user, save in DB
+        const newUser = new User(req.body);
+        await newUser.save();
+
+        res.status(201).send({
+            message: 'User created successfully!',
+            success: true
+        });
+
+    }catch(error){
+        res.send({
+            message: error.message,
+            success: false
+        });
+    }
 })
-router.post('/login',async(req,res)=>{
-      //1. Validate the user
-       try{
-          const user =await User.findOne({email:req.body.email})
 
-          if(!user){
-             return res.send({
-                message:"User does not Exist",
-                success:false
-             })
-          }
-         const isValid =await bcrypt.compare(req.body.password,user.password)
-          if(!isValid){
-             return res.send({
-                 message: "Invalid Password",
-                 success:false
-             })
-          }
-          const token = jwt.sign({userID:user._id},process.env.SECRET_KEY,{expiresIn:"1d"})
-          res.send({
-              message:"User Login Succesfully",
-              success:true,
-              token:token
+router.post('/login', async (req, res) => {
+    try{
+        //1. Check if user exists
+        const user = await User.findOne({email: req.body.email});
+        if(!user){
+            return res.send({
+                message: 'User does not exist',
+                success: false
+            })
+        }
+       console.log('Input Password:', req.body.password);
+console.log('User from DB:', user);
+        //2. check if the password is correct
+        const isvalid = await bcrypt.compare(req.body.password, user.password);
+        if(!isvalid){
+            return res.send({
+                message: 'invalid password',
+                success: false
+            })
+        }
 
-          })
-       }catch(error){
-           res.send({
-              message:'Login Failed',
-              success:false
-           })
-       }
+        //3. If the user exists & password is correct, assign a JWT
+        const token = jwt.sign({userId: user._id}, process.env.SECRET_KEY, {expiresIn: "1d"});
 
-      
-})
-module.exports=router
+        res.send({
+            message: 'user logged-in successfully',
+            success: true,
+            token: token
+        });
+
+    }catch(error){
+        res.send({
+            message: error.message,
+            success: false
+        })
+    }
+});
+
+module.exports = router;
